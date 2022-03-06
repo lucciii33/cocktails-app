@@ -4,3 +4,28 @@ body{
 .left{
     color:#C1436D
 }
+
+.button {
+    outline: 0;
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid #C1436D;
+    background: #C1436D;
+    color: white;
+    font-weight: 400;
+    transition: box-shadow 0.5s ease-in-out, border-color 0.5s ease-in-out;
+    border-radius: 10px;
+}
+.button:hover {
+    background-color: #C1436D;
+    color: white;
+    box-shadow: 0 0 5px #C1436D,
+                0 0 20px rgb(255,0,119),
+                0 0 35px rgb(255,0,119),
+                0 0 50px rgb(255,0,119);
+    border-color: #C1436D;
+}

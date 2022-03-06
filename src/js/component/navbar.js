@@ -12,15 +12,15 @@ export const Navbar = () => {
 			<div className=" d-flex col-8 justify-content-end">
 
 				<nav className="navbar m-2">
-						<form className="d-flex m-3">
+						<form className="d-flex m-2">
 							<input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-								<button className="btn btn-outline-success" type="submit">Search</button>
+								<button className="button" type="submit">Search</button>
 						</form>
 					<Link to="/register">
-							<button className="btn btn-outline-success m-2" style={{Color: '#C1436D', borderColor: '#C1436D'}}>register</button>
+							<button className="button m-2">register</button>
 					</Link>
 					<Link to="/signin">
-							<button className="btn btn-outline-success">login</button>
+							<button className="button">login</button>
 					</Link>
 					
 				</nav>

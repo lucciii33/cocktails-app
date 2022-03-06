@@ -10,9 +10,9 @@ export const Demo = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="container border rounded border-danger bg-dark mt-3 py-5 mb-5"  style={{ width: '480px', height: 'auto' }}>
+		<div className="container border rounded border-danger bg-dark mt-3 mb-4"  style={{ width: '480px', height: 'auto' }}>
 			<img className="rounded mx-auto d-block" src={rigoImage} style={{ width: '400px', height: 'auto' }} />
-			<div className="container px-5">
+			<div className="container px-4">
 				<form id="contactForm">
 					<div className="mb-3 mx-auto" style={{ width: '400px', height: 'auto' }}>
 						<input className="form-control" id="emailAddress" type="text" placeholder="Email Address" data-sb-validations="required" />
@@ -36,7 +36,7 @@ export const Demo = () => {
 						<div className="invalid-feedback" data-sb-feedback=":required">One option is required.</div>
 					</div>
 					<div className="d-grid mx-auto mb-3" style={{ width: '400px', height: 'auto' }}>
-						<button className="btn btn-primary btn-lg " style={{backgroundColor: '#C1436D', border: 'none'}} id="submitButton" type="submit">Submit</button>
+						<button className="button btn-lg " style={{backgroundColor: '#C1436D', border: 'none'}} id="submitButton" type="submit">Submit</button>
 					</div>
 				</form>
 			</div>

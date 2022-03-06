@@ -23,7 +23,7 @@ export const SingIn = () => {
 						<div className="invalid-feedback" data-sb-feedback="password:required">Password is required.</div>
 					</div>
 					<div className="d-grid mx-auto mb-3" style={{ width: '400px', height: 'auto' }}>
-						<button className="btn btn-primary btn-lg" style={{backgroundColor: '#C1436D', border: 'none'}} id="submitButton" type="submit">Login</button>
+						<button className="button btn-lg" style={{backgroundColor: '#C1436D', border: 'none'}} id="submitButton" type="submit">Login</button>
 					</div>
 				</form>
 			</div>
