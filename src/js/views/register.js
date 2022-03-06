@@ -10,35 +10,40 @@ export const Demo = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-	
-			<div className="">
-				<div className="row g-2 ">
-					<div className="">
-
-					<img  className=""src={rigoImage} style={{ width: '400px', height: 'auto' }} />
+		<div className="container">
+			<img className="rounded mx-auto d-block" src={rigoImage} style={{ width: '400px', height: 'auto' }} />
+			<div className="container px-5">
+				<form id="contactForm">
+					<div className="mb-3 mx-auto" style={{ width: '400px', height: 'auto' }}>
+						<label style={{ color: '#C1436D' }} className="form-label" for="emailAddress">Email Address</label>
+						<input className="form-control" id="emailAddress" type="text" placeholder="Email Address" data-sb-validations="required" />
+						<div className="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
 					</div>
-
-					<div>
-
-					<div className="row">
-						<label style={{ color: '#C1436D' }} className="col-4 m-2"><h5>Email</h5></label>
-						<input className="col-8" type="" placeholder="email" style={{ width: '300px', height: '30px' }}></input>
+					<div className="mb-3 mx-auto" style={{ width: '400px', height: 'auto' }}>
+						<label style={{ color: '#C1436D' }} className="form-label" for="confirmEmailAddress">Confirm Email Address</label>
+						<input className="form-control" id="confirmEmailAddress" type="text" placeholder="Confirm Email Address" data-sb-validations="required" />
+						<div className="invalid-feedback" data-sb-feedback="confirmEmailAddress:required">Confirm Email Address is required.</div>
 					</div>
-					<div className="row">
-						<label style={{ color: '#C1436D' }} className="col-4 m-2"><h5>password</h5></label>
-						<input className="col-8" type="password" placeholder="email" style={{ width: '300px', height: '30px' }}></input>
+					<div className="mb-3 mx-auto" style={{ width: '400px', height: 'auto' }}>
+						<label style={{ color: '#C1436D' }} className="form-label" for="password">Password</label>
+						<input className="form-control" id="password" type="text" placeholder="Password" data-sb-validations="required" />
+						<div className="invalid-feedback" data-sb-feedback="password:required">Password is required.</div>
 					</div>
-					<div className="row">
-						<label style={{ color: '#C1436D' }} className="col-4 m-2"><h5>Phone</h5></label>
-						<input className="col-8" type="text" placeholder="Phone" style={{ width: '300px', height: '30px' }}></input>
+					<div className="mb-3 mx-auto" style={{ width: '400px', height: 'auto' }}>
+						<label style={{ color: '#C1436D' }} className="form-label" for="confirmPassword">Confirm Password</label>
+						<input className="form-control" id="confirmPassword" type="text" placeholder="Confirm Password" data-sb-validations="required" />
+						<div className="invalid-feedback" data-sb-feedback="confirmPassword:required">Confirm Password is required.</div>
 					</div>
-					<div className="row">
-						<label style={{ color: '#C1436D' }} className="col-4 m-2"><h5>age</h5></label>
-						<input className="col-8" type="age" placeholder="Phone" style={{ width: '300px', height: '30px' }}></input>
+					<div className="mb-3 mx-auto" style={{ width: '400px', height: 'auto' }}>
+						<input className="form-check-input mx-1" id="iAm21YearsOfAgeOrOlder" type="checkbox" name="" data-sb-validations="required" />
+						<label style={{ color: '#C1436D' }} className="form-check-label mx-auto" for="iAm21YearsOfAgeOrOlder">I am 21 years of age or older</label>
+						<div className="invalid-feedback" data-sb-feedback=":required">One option is required.</div>
 					</div>
+					<div className="d-grid mx-auto" style={{ width: '400px', height: 'auto' }}>
+						<button className="btn btn-primary btn-lg" style={{backgroundColor: '#C1436D', border: 'none'}} id="submitButton" type="submit">Submit</button>
 					</div>
-				</div>
+				</form>
 			</div>
-		
+		</div>
 	);
 };
