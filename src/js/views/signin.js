@@ -10,7 +10,7 @@ export const SingIn = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="container border rounded border-secondary bg-dark"  style={{ width: '500px', height: 'auto' }}>
+		<div className="container border rounded border-danger bg-dark mt-3"  style={{ width: '500px', height: 'auto' }}>
 			<img className="rounded mx-auto d-block" src={rigoImage} style={{ width: '400px', height: 'auto' }} />
 			<div className="container px-5">
 				<form id="contactForm">
