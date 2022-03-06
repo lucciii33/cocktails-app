@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-import rigoImage from "../../img/login.png";
+import rigoImage from "../../img/login1.png";
 
 import { Context } from "../store/appContext";
 

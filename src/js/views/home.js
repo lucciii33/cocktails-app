@@ -4,7 +4,7 @@ import rigoImage from "../../img/3img.png";
 import "../../styles/home.css";
 
 export const Home = () => (
-	<div className="container">
+	<div className="container py-5">
 		<div className="row d-flex align-items-center">
 			<div className="col-6">
 				<h1 className="left fw-bold text-center">The Drink Link</h1>
