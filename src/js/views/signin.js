@@ -10,24 +10,23 @@ export const SingIn = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="">
-			<form>
-				<div className="mb-3">
-					<label  style={{ color: '#C1436D' }}  for="exampleInputEmail1" class="form-label">Email address</label>
-					<input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
-						<div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
-				</div>
-				<div className="mb-3">
-					<label  style={{ color: '#C1436D' }}  for="exampleInputPassword1" className="form-label">Password</label>
-					<input type="password" className="form-control" id="exampleInputPassword1"/>
-				</div>
-				<div class="mb-3 form-check">
-					<input   type="checkbox" className="form-check-input" id="exampleCheck1"/>
-					<label  style={{ color: '#C1436D' }}  className="form-check-label" for="exampleCheck1">Check me out</label>
-				</div>
-				<button type="submit" className="btn btn-primary">Submit</button>
-			</form>
+		<div className="container border rounded border-secondary bg-dark"  style={{ width: '500px', height: 'auto' }}>
+			<img className="rounded mx-auto d-block" src={rigoImage} style={{ width: '400px', height: 'auto' }} />
+			<div className="container px-5">
+				<form id="contactForm">
+					<div className="mb-3 mx-auto" style={{ width: '400px', height: 'auto' }}>
+						<input className="form-control" id="emailAddress" type="text" placeholder="Email Address" data-sb-validations="required" />
+						<div className="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
+					</div>
+					<div className="mb-3 mx-auto" style={{ width: '400px', height: 'auto' }}>
+						<input className="form-control" id="password" type="text" placeholder="Password" data-sb-validations="required" />
+						<div className="invalid-feedback" data-sb-feedback="password:required">Password is required.</div>
+					</div>
+					<div className="d-grid mx-auto mb-3" style={{ width: '400px', height: 'auto' }}>
+						<button className="btn btn-primary btn-lg" style={{backgroundColor: '#C1436D', border: 'none'}} id="submitButton" type="submit">Login</button>
+					</div>
+				</form>
+			</div>
 		</div>
-
 	);
 };
