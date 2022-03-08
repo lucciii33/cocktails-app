@@ -9,7 +9,7 @@ export const Navbar = () => {
 					<h6 className="m-3">Cheers & Share</h6>
 				</Link>
 			</div>
-			<div className=" d-flex col-8 justify-content-end">
+			<div className="d-flex col-8 justify-content-end">
 
 				<nav className="navbar m-2">
 						<form className="d-flex m-2">
@@ -17,10 +17,10 @@ export const Navbar = () => {
 								<button className="button" type="submit">Search</button>
 						</form>
 					<Link to="/register">
-							<button className="button m-2">register</button>
+							<button className="button m-2">Register</button>
 					</Link>
 					<Link to="/signin">
-							<button className="button">login</button>
+							<button className="button m-2">Login</button>
 					</Link>
 					
 				</nav>
