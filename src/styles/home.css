@@ -11,7 +11,7 @@ body{
     display: inline-block;
     padding: 10px 20px;
     font-size: 15px;
-    overflow: hidden;
+    /* overflow: hidden; */
     cursor: pointer;
     border: 2px solid #C1436D;
     background: #C1436D;
@@ -28,4 +28,8 @@ body{
                 0 0 35px rgb(255,0,119),
                 0 0 50px rgb(255,0,119);
     border-color: #C1436D;
+}
+
+.joshstyles {
+    border-color: #C1436D !important;
 }
