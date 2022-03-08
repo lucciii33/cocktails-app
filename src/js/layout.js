@@ -3,10 +3,11 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";
-import { Demo } from "./views/register";
+import { Demo, Register } from "./views/register";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 import { SignIn } from "./views/signin";
+import { RecipeBrowser } from "./views/recipeBrowser";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
@@ -27,13 +28,16 @@ const Layout = () => {
 							<Home />
 						</Route>
 						<Route exact path="/register">
-							<Demo />
+							<Register />
 						</Route>
 						<Route exact path="/single/:theid">
 							<Single />
 						</Route>
 						<Route exact path="/signin">
 							<SignIn />
+						</Route>
+						<Route exact path="/recipeBrowser">
+							<RecipeBrowser  />
 						</Route>
 						<Route>
 							<h1>Not found!</h1>

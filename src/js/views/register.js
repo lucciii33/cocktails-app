@@ -5,7 +5,7 @@ import { Context } from "../store/appContext";
 
 import "../../styles/demo.css";
 const borderColor = {borderColor: "#C1436D"}
-export const Demo = () => {
+export const Register = () => {
 
 	return (
 		<div className="container border rounded bg-dark mt-4 mb-4 joshstyles"  style={{ width: '500px', height: 'auto' }}>
