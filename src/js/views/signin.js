@@ -6,7 +6,7 @@ import { Context } from "../store/appContext";
 
 import "../../styles/demo.css";
 
-export const SingIn = () => {
+export const SignIn = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
