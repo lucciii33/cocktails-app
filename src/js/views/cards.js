@@ -12,20 +12,17 @@ export const Cards = ({ data }) => {
     <div className=" container">
       <div className="card " style={{ width: "18rem" }}>
         <img
-          src=""
+          src="https://tse2.mm.bing.net/th?id=OIP.-frqCpspuqwgiM1c2WufrAHaHE&pid=Api&P=0&w=174&h=166"
           className="card-img-top"
-          alt="..."
+          alt=""
         />
         <div className="card-body">
-          <h5 className="card-title">gg</h5>
+          <h5 className="card-title">ggdddd</h5>
           <p className="card-text">
-            g
+            gsssssssssssss
           </p>
           <p className="card-text">
-            g
-          </p>
-          <p className="card-text">
-            g
+            gddddddddddddddd
           </p>
 
           <div className="row">
@@ -38,9 +35,6 @@ export const Cards = ({ data }) => {
               </Link>
             </div>
             <div className="col-2">
-              <button>
-              click 
-              </button>
             </div>
           </div>
         </div>
