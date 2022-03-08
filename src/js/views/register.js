@@ -1,18 +1,16 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import rigoImage from "../../img/login.png";
-
 import { Context } from "../store/appContext";
 
 import "../../styles/demo.css";
-
+const borderColor = {borderColor: "#C1436D"}
 export const Demo = () => {
-	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="container border rounded border-danger bg-dark mt-3 mb-4"  style={{ width: '480px', height: 'auto' }}>
+		<div className="container border rounded bg-dark mt-4 mb-4 joshstyles"  style={{ width: '500px', height: 'auto' }}>
 			<img className="rounded mx-auto d-block" src={rigoImage} style={{ width: '400px', height: 'auto' }} />
-			<div className="container px-4">
+			<div className="container px-5">
 				<form id="contactForm">
 					<div className="mb-3 mx-auto" style={{ width: '400px', height: 'auto' }}>
 						<input className="form-control" id="emailAddress" type="text" placeholder="Email Address" data-sb-validations="required" />
