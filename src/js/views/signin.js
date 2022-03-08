@@ -10,7 +10,7 @@ export const SignIn = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="container border rounded border-danger bg-dark mt-3"  style={{ width: '500px', height: 'auto' }}>
+		<div className="container border rounded border-danger bg-dark mt-4 mb-4 joshstyles"  style={{ width: '500px', height: 'auto' }}>
 			<img className="rounded mx-auto d-block" src={rigoImage} style={{ width: '400px', height: 'auto' }} />
 			<div className="container px-5">
 				<form id="contactForm">
