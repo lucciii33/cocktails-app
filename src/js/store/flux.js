@@ -4,8 +4,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			byName: []
 		},
 		actions: {
-			getData: ()=>{
-				fetch("https://thecocktaildb.com/api/json/v1/1/search.php?s=margarita", {
+			getData: (recipe)=>{
+				fetch(`https://thecocktaildb.com/api/json/v1/1/search.php?s=${recipe} `, {   
 				})
 					.then(response => {
 						return response.json();
