@@ -8,6 +8,7 @@ import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 import { SignIn } from "./views/signin";
 import { RecipeBrowser } from "./views/recipeBrowser";
+import { FullCards } from "./views/fullCards";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";

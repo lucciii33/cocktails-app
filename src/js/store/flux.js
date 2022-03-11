@@ -1,7 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			byName: []
+			recipe: []
 		},
 		actions: {
 			getData: (recipe)=>{
@@ -12,7 +12,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.then(data => {
 						console.log(data.drinks)
-						return setStore({ news: data.drinks})
+						return setStore({ recipe: data.drinks})
 					})
 					.catch(err => {
 						console.error(err);
