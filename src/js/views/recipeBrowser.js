@@ -54,7 +54,7 @@ export const RecipeBrowser = ({data}) => {
                 />)}
 
             </div>
-             <div>
+             {/* <div>
                 {recipe.map((rec1, index) => <FullCards data={{
                     value1: rec1.strDrink,
                     value2: rec1.strInstructions,
@@ -71,7 +71,7 @@ export const RecipeBrowser = ({data}) => {
                     key={index}
                 />)}
 
-            </div> 
+            </div>  */}
         </div>
     );
 };
