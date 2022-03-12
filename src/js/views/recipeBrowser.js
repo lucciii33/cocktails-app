@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { FullCards } from "./fullCards";
+import {Cards} from "./cards"
 
 export const RecipeBrowser = ({data}) => {
     const fetchRes = async () => {
@@ -22,7 +23,7 @@ export const RecipeBrowser = ({data}) => {
         fetchRes()
     }
 
-    const [recipe, setRecipe] = useState('')
+    const [recipe, setRecipe] = useState([])
     const [recipeInp, setRecipeInp] = useState([])
     const { store, actions } = useContext(Context);
     const params = useParams();
@@ -54,24 +55,20 @@ export const RecipeBrowser = ({data}) => {
                 />)}
 
             </div>
-             {/* <div>
-                {recipe.map((rec1, index) => <FullCards data={{
-                    value1: rec1.strDrink,
-                    value2: rec1.strInstructions,
-                    value3: rec1.strDrinkThumb,
-                    value4: rec1.strIngredient1,
-                    value5: rec1.strIngredient2,
-                    value6: rec1.strIngredient3,
-                    value7: rec1.strIngredient4,
-                    value8: rec1.strMeasure1,
-                    value9: rec1.strMeasure2,
-                    value10: rec1.strMeasure3,
-                    value11: rec1.strMeasure4,
-                }}
-                    key={index}
-                />)}
+            <div>
+            {recipe.map((rec , index)=>{
+		 
+			return (
+				<div key={index}>
+					<Cards  rec={rec}/>
+					
+				</div>
 
-            </div>  */}
+				
+			)	
+			})}
+            </div>
+            
         </div>
     );
 };

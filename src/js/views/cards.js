@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-export const Cards = ({ data }) => {
+export const Cards = ({ rec }) => {
   const { store, actions } = useContext(Context);
   const [icon, setIcon] = useState(false)
   const [addFav, setAddFav] = useState(0)
@@ -17,7 +17,7 @@ export const Cards = ({ data }) => {
           alt=""
         />
         <div className="card-body">
-          <h5 className="card-title">ggdddd</h5>
+          <h5 className="card-title">{rec.strDrink}</h5>
           <p className="card-text">
             gsssssssssssss
           </p>
