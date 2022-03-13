@@ -24,6 +24,13 @@ export const Home = () => (
 				<img src={rigoImage} style={{ width: '600px', height: 'auto' }} />
 			</div>
 		</div>
-	
+		<div className=" random-drink col-12 text-center">
+		<h2 className="left text-center">Don't know what to drink?</h2>
+		<p className="left text-center">Hit that button and let us chose an amazing Drink for you!</p>
+		<Link to="/randomDrink">
+			<button className="button text-center" style={{ backgroundColor: '#C1436D', border: 'none' }}>Get a Random Drink</button>
+		</Link>
+		</div>
+
 	</div>
 );

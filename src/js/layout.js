@@ -8,6 +8,7 @@ import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 import { SignIn } from "./views/signin";
 import { RecipeBrowser } from "./views/recipeBrowser";
+import { RandomDrink } from "./views/randomDrink";
 import { FullCards } from "./views/fullCards";
 
 import { Navbar } from "./component/navbar";
@@ -39,6 +40,9 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/recipeBrowser">
 							<RecipeBrowser  />
+						</Route>
+						<Route exact path="/randomDrink">
+							<RandomDrink  />
 						</Route>
 						<Route>
 							<h1>Not found!</h1>

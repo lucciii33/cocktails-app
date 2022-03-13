@@ -11,7 +11,7 @@ const [formValues, setFormValues ] = useState({
 	emailCheck: "",
 	password: "",
 	passwordCheck: "",
-	ageCheck: true,
+	ageCheck: false,
 });
 
 const validate = () => {
@@ -43,7 +43,7 @@ console.log(formValues.email != "" , formValues.emailCheck != "" , formValues.pa
 						<div className="invalid-feedback" data-sb-feedback="confirmPassword:required">Confirm Password is required.</div>
 					</div>
 					<div className="mb-3 mx-auto" style={{ width: '400px', height: 'auto' }}>
-						<input  onChange={(e)=> setFormValues({...formValues,ageCheck:e.target.value}) } className="form-check-input mx-1" id="iAm21YearsOfAgeOrOlder" type="checkbox" name="" data-sb-validations="required" />
+						<input value ={formValues.ageCheck}  onChange={(e)=> setFormValues({...formValues,ageCheck:e.target.value}) } className="form-check-input mx-1" id="iAm21YearsOfAgeOrOlder" type="checkbox" name="" data-sb-validations="required" />
 						<label style={{ color: '#C1436D' }} className="form-check-label mx-auto" for="iAm21YearsOfAgeOrOlder">I am 21 years of age or older</label>
 						<div className="invalid-feedback" data-sb-feedback=":required">One option is required.</div>
 					</div>
