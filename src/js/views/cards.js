@@ -9,22 +9,22 @@ export const Cards = ({ rec }) => {
   const [addFav, setAddFav] = useState(0)
   const params = useParams();
   return (
-    <div className=" container">
+    <div className="container">
       <div className="card " style={{ width: "18rem" }}>
-        <img
-          src="https://tse2.mm.bing.net/th?id=OIP.-frqCpspuqwgiM1c2WufrAHaHE&pid=Api&P=0&w=174&h=166"
-          className="card-img-top"
-          alt=""
-        />
+        <img src={rec.strDrinkThumb}/>
         <div className="card-body">
           <h5 className="card-title">{rec.strDrink}</h5>
-          <p className="card-text">
-            gsssssssssssss
-          </p>
-          <p className="card-text">
-            gddddddddddddddd
-          </p>
-
+          <p className="card-text"></p>
+          <p className="card-text">{rec.strInstructions}</p>
+          <p></p>
+          <p className="card-text">Ingredient 1 : {rec.strIngredient1}</p>
+          <p className="card-text">Ingredient 2 :{rec.strIngredient2}</p>
+          <p className="card-text">Ingredient 3 :{rec.strIngredient3}</p>
+          <p className="card-text">Ingredient 4 :{rec.strIngredient4}</p>
+          <p className="card-text">Measure 1 :{rec.strMeasure1}</p>
+          <p className="card-text">Measure 2 :{rec.strMeasure2}</p>
+          <p className="card-text">Measure 3 :{rec.strMeasure3}</p>
+          <p className="card-text">Measure 4 :{rec.strMeasure4}</p>
           <div className="row">
 
             <div className="col-10">

@@ -37,7 +37,7 @@ export const RecipeBrowser = ({data}) => {
                     </form>
                 </div>
             </div>
-            <div className="container">
+            {/* <div className="container">
                 {store.recipe.map((rec, index) => <FullCards data={{
                     value1: rec.strDrink,
                     value2: rec.strInstructions,
@@ -54,13 +54,13 @@ export const RecipeBrowser = ({data}) => {
                     key={index}
                 />)}
 
-            </div>
-            <div>
+            </div> */}
+            <div className="container d-flex flex-wrap">
             {recipe.map((rec , index)=>{
 		 
 			return (
 				<div key={index}>
-					<Cards  rec={rec}/>
+					<Cards  rec={rec} />
 					
 				</div>
 
