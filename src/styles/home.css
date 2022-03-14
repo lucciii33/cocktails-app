@@ -33,3 +33,24 @@ body{
 .joshstyles {
     border-color: #C1436D !important;
 }
+
+.my-button {
+    width: 150px;
+    height: 150px;
+    border: none;
+    border-radius: 100px;
+    outline: none;
+    background: #C1436D;
+    color: white; 
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  }
+  .my-button:hover {
+    background-color: #C1436D;
+    color: white;
+    box-shadow: 0 0 5px #C1436D,
+                0 0 20px rgb(255,0,119),
+                0 0 35px rgb(255,0,119),
+                0 0 50px rgb(255,0,119);
+    border-color: #C1436D;
+  }
