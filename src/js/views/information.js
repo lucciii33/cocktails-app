@@ -31,18 +31,17 @@ export const Information = ({ rec }) => {
                         </div>
                     </div>
                 </div>
+
             </div>
-            <div className="col-10">
-                <Link to={{ pathname: "information/" }}>
-                    <button className="btn btn-primary d-flex justify-content-between m-1">
-                        information
+            <div className="d-flex">
+                    <button className="button d-flex justify-content-between m-1">
+                        how many person drinking?
                     </button>
-                </Link>
-            </div>
-            <div className="col-2">
+                    <input type='number' value='number' className="rounded-3" style={{width: '5rem'}}></input>
             </div>
         </div>
     );
+                
 };
 
 Information.propTypes = {
