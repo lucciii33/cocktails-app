@@ -10,6 +10,7 @@ import { SignIn } from "./views/signin";
 import { RecipeBrowser } from "./views/recipeBrowser";
 import { RandomDrink } from "./views/randomDrink";
 import { FullCards } from "./views/fullCards";
+import { Information } from "./views/information";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
@@ -44,6 +45,7 @@ const Layout = () => {
 						<Route exact path="/randomDrink">
 							<RandomDrink  />
 						</Route>
+						<Route exact path="/information/:name" component={Information}/>
 						<Route>
 							<h1>Not found!</h1>
 						</Route>

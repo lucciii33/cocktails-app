@@ -1,7 +1,9 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			recipe: []
+			recipe: [],
+			users : [],
+			loggId: []
 		},
 		actions: {
 			// getData: (recipe)=>{
@@ -18,6 +20,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// 			console.error(err);
 			// 		});
 			// }
+
+			RegisterUsers: ()=>{
+				
+			}
+
 		}
 	};
 };

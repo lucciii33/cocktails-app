@@ -5,8 +5,6 @@ import { Context } from "../store/appContext";
 
 export const Cards = ({ rec }) => {
   const { store, actions } = useContext(Context);
-  const [icon, setIcon] = useState(false)
-  const [addFav, setAddFav] = useState(0)
   const params = useParams();
   return (
     <div className="container">
@@ -28,11 +26,11 @@ export const Cards = ({ rec }) => {
           <div className="row">
 
             <div className="col-10">
-              <Link to={{ pathname: "information/" }}>
+            <Link to={{ pathname: "information/" + rec.name, state:rec}}>
                 <button className="btn btn-primary d-flex justify-content-between m-1">
-                  information
+                  Read articule
                 </button>
-              </Link>
+						</Link>
             </div>
             <div className="col-2">
             </div>
