@@ -10,16 +10,16 @@ export const Information = ({ rec }) => {
     const [addFav, setAddFav] = useState(0)
     const params = useParams();
     return (
-        <div className="container">
-            <div className="card mb-3" style={{ maxWidth: '540px' }}>
+        <div className="container mt-3">
+            <div className="card mb-3" style={{ maxWidth: '1100px' }}>
                 <div className="row g-0">
                     <div className="col-md-4">
-                        <img src={rec.strDrinkThumb} className="img-fluid rounded-start" alt="..." />
+                        <img src={rec.strDrinkThumb} className="img-fluid rounded-start m-1" alt="..." style={{width: '450px', height:'400px'}}/>
                     </div>
                     <div className="col-md-8">
                         <div className="card-body">
                             <h5 class="card-title">{rec.strDrink}</h5>
-                            <p class="card-text">{rec.strInstructions}</p>
+                            <p class="card-text">Instructions: {rec.strInstructions}</p>
                             <p className="card-text">Ingredient 1 : {rec.strIngredient1}</p>
                             <p className="card-text">Ingredient 2 :{rec.strIngredient2}</p>
                             <p className="card-text">Ingredient 3 :{rec.strIngredient3}</p>
