@@ -33,7 +33,7 @@ const [formValues, setFormValues ] = useState({
 						<div className="invalid-feedback" data-sb-feedback=":required">One option is required.</div>
 					</div>
 					<div className="d-grid mx-auto mb-3" style={{ width: '400px', height: 'auto' }}>
-						<button onClick={()=> h} className="button btn-lg " style={{backgroundColor: '#C1436D', border: 'none'}} id="submitButton" type="submit">Submit</button>
+						<button onClick={()=> actions.RegisterUsers(formValues)} className="button btn-lg " style={{backgroundColor: '#C1436D', border: 'none'}} id="submitButton" type="submit">Submit</button>
 					</div>
 				</form>
 			</div>
