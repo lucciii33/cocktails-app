@@ -6,6 +6,7 @@ import { Context } from "../store/appContext";
 import "../../styles/demo.css";
 const borderColor = {borderColor: "#C1436D"}
 export const Register = () => {
+	const { store, actions } = useContext(Context);
 const [formValues, setFormValues ] = useState({
 	email: "",
 	password: "",
@@ -33,7 +34,7 @@ const [formValues, setFormValues ] = useState({
 						<div className="invalid-feedback" data-sb-feedback=":required">One option is required.</div>
 					</div>
 					<div className="d-grid mx-auto mb-3" style={{ width: '400px', height: 'auto' }}>
-						<button onClick={()=> actions.RegisterUsers(formValues)} className="button btn-lg " style={{backgroundColor: '#C1436D', border: 'none'}} id="submitButton" type="submit">Submit</button>
+						<span onClick={()=> actions.registerUsers(formValues)} className="button btn-lg " type='text' style={{backgroundColor: '#C1436D', border: 'none'}} id="submitButton">Submit</span>
 					</div>
 				</form>
 			</div>

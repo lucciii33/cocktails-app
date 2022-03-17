@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import rigoImage from "../../img/3img.png";
+import rigoImage2 from "../../img/img4.png";
 import "../../styles/home.css";
 import { FullCards } from "./fullCards";
 
@@ -25,7 +26,9 @@ export const Home = () => (
 			</div>
 		</div>
 		<div className=" random-drink col-12 text-center">
+		<img src={rigoImage2} style={{ width: '600px', height: 'auto' }} />
 		<h2 className="left text-center">Don't know what to drink?</h2>
+
 		<p className="left text-center">Hit that button and let us chose an amazing Drink for you!</p>
 		<Link to="/randomDrink">
 			<button className="button text-center" style={{ backgroundColor: '#C1436D', border: 'none' }}>Get a Random Drink</button>

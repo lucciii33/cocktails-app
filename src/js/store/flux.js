@@ -21,8 +21,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// 		});
 			// }
 
-			RegisterUsers: (user)=>{
-				const newUser = getStore().favorites;
+			registerUsers: (user)=>{
+				const newUser = getStore().users;
 				newUser.push(user)
 				setStore({ users: newUser });
 			}

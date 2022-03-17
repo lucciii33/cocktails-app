@@ -37,7 +37,7 @@ export const Information = ({ rec }) => {
                     <button className="button d-flex justify-content-between m-1">
                         how many person drinking?
                     </button>
-                    <input type='number' value='number' className="rounded-3" style={{width: '5rem'}}></input>
+                    <input type='number' value='number' className="rounded-3" style={{width: '5rem'}} ></input>
             </div>
         </div>
     );
