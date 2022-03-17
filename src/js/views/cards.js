@@ -16,8 +16,8 @@ export const Cards = ({ rec }) => {
           <p className="card-text">Category: {rec.strCategory}</p>
           <p></p>
           <p className="card-text">Alcoholic : {rec.strAlcoholic}</p>
-          {/* <p className="card-text">Ingredient 2 :{rec.strIngredient2}</p>
-          <p className="card-text">Ingredient 3 :{rec.strIngredient3}</p>
+          <p className="card-text">Glass Type:{rec.strGlass}</p>
+          {/* <p className="card-text">Ingredient 3 :{rec.strIngredient3}</p>
           <p className="card-text">Ingredient 4 :{rec.strIngredient4}</p>
           <p className="card-text">Measure 1 :{rec.strMeasure1}</p>
           <p className="card-text">Measure 2 :{rec.strMeasure2}</p>
