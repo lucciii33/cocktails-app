@@ -3,10 +3,11 @@ import PropTypes from "prop-types";
 import { Link, useParams, useLocation } from "react-router-dom";
 import { Context } from "../store/appContext";
 import rigoImage8 from "../../img/spain.jpg";
-
+import rigoImage9 from "../../img/usa.jpg";
 export const Information = ({ rec }) => {
     var rec = useLocation().state;
     const { store, actions } = useContext(Context);
+    const[language, setLanguage] = useState("")
     const [icon, setIcon] = useState(false)
     const [addFav, setAddFav] = useState(0)
     const params = useParams();
@@ -20,7 +21,8 @@ export const Information = ({ rec }) => {
                     <div className="col-md-8">
                         <div className="card-body">
                             <h5 class="card-title">{rec.strDrink}</h5>
-                            <p class="card-text">Instructions: {rec.strInstructions}</p>
+                            <p class="card-text">Instructions: {
+                            language=='italian'?rec.strInstructionsIT:rec.strInstructions}</p>
                             <p className="card-text">Ingredient 1 : {rec.strIngredient1}</p>
                             <p className="card-text">Ingredient 2 :{rec.strIngredient2}</p>
                             <p className="card-text">Ingredient 3 :{rec.strIngredient3}</p>
@@ -34,7 +36,8 @@ export const Information = ({ rec }) => {
                 </div>
                 <div className="d-flex justify-content-end">
 
-                    {rec.strInstructionsIT && <img src={rigoImage8} style={{ width: '50px', height: 'auto' }} onClick='' />}
+                    {rec.strInstructionsIT && language!='italian' && <img src={rigoImage8} style={{ width: '50px', height: 'auto' }} onClick={()=>{setLanguage('italian')}}/>}
+                    {language!=""&& <img src={rigoImage9} style={{ width: '50px', height: 'auto' }} onClick={()=>{setLanguage('')} }/>}
 
 
                 </div>
