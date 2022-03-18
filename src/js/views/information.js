@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import { Link, useParams, useLocation } from "react-router-dom";
 import { Context } from "../store/appContext";
+import rigoImage8 from "../../img/spain.jpg";
 
 export const Information = ({ rec }) => {
     var rec = useLocation().state;
@@ -14,7 +15,7 @@ export const Information = ({ rec }) => {
             <div className="card mb-3" style={{ maxWidth: '1100px' }}>
                 <div className="row g-0">
                     <div className="col-md-4">
-                        <img src={rec.strDrinkThumb} className="img-fluid rounded-start m-1" alt="..." style={{width: '450px', height:'400px'}}/>
+                        <img src={rec.strDrinkThumb} className="img-fluid rounded-start m-1" alt="..." style={{ width: '450px', height: '400px' }} />
                     </div>
                     <div className="col-md-8">
                         <div className="card-body">
@@ -31,17 +32,23 @@ export const Information = ({ rec }) => {
                         </div>
                     </div>
                 </div>
+                <div className="d-flex justify-content-end">
+
+                    {rec.strInstructionsIT && <img src={rigoImage8} style={{ width: '50px', height: 'auto' }} onClick='' />}
+
+
+                </div>
 
             </div>
             <div className="d-flex">
-                    <button className="button d-flex justify-content-between m-1">
-                        how many person drinking?
-                    </button>
-                    <input type='number' value='number' className="rounded-3" style={{width: '5rem'}} ></input>
+                <button className="button d-flex justify-content-between m-1">
+                    how many person drinking?
+                </button>
+                <input type='number' value='number' className="rounded-3" style={{ width: '5rem' }} ></input>
             </div>
         </div>
     );
-                
+
 };
 
 Information.propTypes = {
