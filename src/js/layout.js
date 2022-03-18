@@ -9,6 +9,7 @@ import injectContext from "./store/appContext";
 import { SignIn } from "./views/signin";
 import { RecipeBrowser } from "./views/recipeBrowser";
 import { RandomDrink } from "./views/randomDrink";
+import { PopularDrinks } from "./component/popularDrinks";
 import { FullCards } from "./views/fullCards";
 import { Information } from "./views/information";
 
@@ -29,8 +30,9 @@ const Layout = () => {
 					<Switch>
 						<Route exact path="/">
 							<Home />
+							<PopularDrinks />
 						</Route>
-						<Route exact path="/register">
+							<Route exact path="/register">
 							<Register />
 						</Route>
 						<Route exact path="/single/:theid">
@@ -50,6 +52,7 @@ const Layout = () => {
 							<h1>Not found!</h1>
 						</Route>
 					</Switch>
+					
 					<Footer />
 				</ScrollToTop>
 			</BrowserRouter>

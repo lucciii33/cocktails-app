@@ -8,7 +8,7 @@ export const Cards = ({ rec }) => {
   const params = useParams();
   return (
     <div className="container">
-      <div className="card " style={{ minWidth: "18rem", maxWidth: "22rem", minHeight: "16rem", margin: '0.7rem',padding: '10px', boxShadow: '5px 10px 18px #6A5ADF'}}>
+      <div className="card " style={{ minWidth: "18rem", maxWidth: "22rem", minHeight: "16rem", margin: '0.2rem', marginTop: '1.5rem',padding: '10px', boxShadow: '5px 10px 18px #6A5ADF'}}>
         <img src={rec.strDrinkThumb} style={{width: "100%", height: '12rem', objectFit: "cover"}}/>
         <div className="card-body">
           <h5 className="card-title">{rec.strDrink}</h5>

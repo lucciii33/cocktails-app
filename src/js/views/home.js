@@ -34,6 +34,7 @@ export const Home = () => (
 			<button className="button text-center" style={{ backgroundColor: '#C1436D', border: 'none' }}>Get a Random Drink</button>
 		</Link>
 		</div>
+		<h2 className="left text-center " style={{ marginTop:"4.5rem" }}>This Our Pooular Drinks</h2>
 
 	</div>
 );

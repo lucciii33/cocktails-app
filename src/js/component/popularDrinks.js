@@ -2,12 +2,12 @@ import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
-import { FullCards } from "./fullCards";
-import {Cards} from "./cards"
+import { FullCards } from "../views/fullCards";
+import {Cards}  from "../views/cards"
 
-export const RecipeBrowser = ({data}) => {
+export const PopularDrinks= ({data}) => {
     const fetchRes = async () => {
-        const res = await fetch(`https://thecocktaildb.com/api/json/v1/1/search.php?s=${recipeInp}`);
+        const res = await fetch(`https://www.thecocktaildb.com/api/json/v2/9973533/popular.php`);
         const data = await res.json();
         setRecipeInp('');
         setRecipe(data.drinks)
@@ -31,10 +31,7 @@ export const RecipeBrowser = ({data}) => {
         <div className="">
             <div className="d-flex justify-content-center align-items-center">
                 <div className="input-group mb-3 mt-3" style={{ width: '500px', height: 'auto' }}>
-                    <form onSubmit={onSubmit} className='input-group mb-3 mt-3"'>
-                        <input type="text" className="form-control me-2 rounded" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" value={recipeInp} onChange={(e) => setRecipeInp(e.target.value)} />
-                        <button className="button" type="button" id="button-addon1" value='' onClick={fetchRes} >Search</button>
-                    </form>
+                
                 </div>
             </div>
             {/* <div className="container">
@@ -55,7 +52,7 @@ export const RecipeBrowser = ({data}) => {
                 />)}
 
             </div> */}
-            <div className="container  d-flex flex-wrap">
+            <div className="container d-flex flex-wrap">
             {recipe.map((rec , index)=>{
 		 
 			return (
@@ -83,6 +80,6 @@ export const RecipeBrowser = ({data}) => {
 
 
 
-RecipeBrowser.propTypes = {
+PopularDrinks.propTypes = {
     match: PropTypes.object
 };
