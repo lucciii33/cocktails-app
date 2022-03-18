@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import rigoImage from "../../img/3img.png";
-import rigoImage2 from "../../img/img4.png";
+import rigoImage5 from "../../img/img5.png";
 import "../../styles/home.css";
 import { FullCards } from "./fullCards";
+import rigoImage6 from "../../img/img6.png";
+import rigoImage7 from "../../img/img7.png";
 
 export const Home = () => (
 	<div className="container py-5">
@@ -25,15 +27,43 @@ export const Home = () => (
 				<img src={rigoImage} style={{ width: '600px', height: 'auto' }} />
 			</div>
 		</div>
-		<div className=" random-drink col-12 text-center">
-		<img src={rigoImage2} style={{ width: '600px', height: 'auto' }} />
+		<div className="d-flex">
+
+		<div className="container border rounded bg-dark mt-4 mb-4 joshstyles random-drink col-12 text-center" style={{ width: '400px', height: 'auto' }}>
+		<img src={rigoImage5} style={{ width: '250px', height: 'auto' }} />
 		<h2 className="left text-center">Don't know what to drink?</h2>
 
 		<p className="left text-center">Hit that button and let us chose an amazing Drink for you!</p>
 		<Link to="/randomDrink">
-			<button className="button text-center" style={{ backgroundColor: '#C1436D', border: 'none' }}>Get a Random Drink</button>
+			<button className="button text-center m-2" style={{ backgroundColor: '#C1436D', border: 'none' }}>Get a Random Drink</button>
 		</Link>
 		</div>
+
+
+
+		<div className="container border rounded bg-dark mt-4 mb-4 joshstyles random-drink col-12 text-center" style={{ width: '400px', height: 'auto' }}>
+		<img src={rigoImage6} style={{ width: '250px', height: 'auto' }} />
+		<h2 className="left text-center">Bussines consulting</h2>
+
+		<p className="left text-center">Are you opening a bar? let us help you we are experts</p>
+		<Link to="/randomDrink">
+			<button className="button text-center m-2" style={{ backgroundColor: '#C1436D', border: 'none' }}>Get a Random Drink</button>
+		</Link>
+		</div>
+
+
+		<div className="container border rounded bg-dark mt-4 mb-4 joshstyles random-drink col-12 text-center" style={{ width: '400px', height: 'auto' }}>
+		<img src={rigoImage7} style={{ width: '250px', height: 'auto' }} />
+		<h2 className="left text-center">make a list here!</h2>
+
+		<p className="left text-center">ready to reat your cocktail list for your party?</p>
+		<Link to="/randomDrink">
+			<button className="button text-center m-2" style={{ backgroundColor: '#C1436D', border: 'none' }}>Get a Random Drink</button>
+		</Link>
+		</div>
+
+		</div>
+
 		<h2 className="left text-center " style={{ marginTop:"4.5rem" }}>This Our Pooular Drinks</h2>
 
 	</div>

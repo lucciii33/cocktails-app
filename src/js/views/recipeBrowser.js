@@ -13,6 +13,25 @@ export const RecipeBrowser = ({data}) => {
         setRecipe(data.drinks)
         console.log(data.drinks);
     };
+    const fetchNonAlcoholic = async () => {
+        const res = await fetch('https://thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic');
+        const data = await res.json();
+       let drinks= []
+            await data.drinks.map(async (e,index)=>{
+            let drink = await fetch(`https://thecocktaildb.com/api/json/v1/1/search.php?s=${e.strDrink}`)
+            let dataDrink = await drink.json();
+            drinks.push(dataDrink.drinks[0])
+        })
+        setRecipe(drinks)
+        console.log(drinks);
+    };
+    const fetchAlcoholic = async () => {
+        const res = await fetch('https://thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic');
+        const data = await res.json();
+        setRecipe(data.drinks)
+        console.log(data.drinks);
+    };
+
 
     useEffect(() => {
         fetchRes()
@@ -25,6 +44,8 @@ export const RecipeBrowser = ({data}) => {
 
     const [recipe, setRecipe] = useState([])
     const [recipeInp, setRecipeInp] = useState([])
+    const [nonAlcoholic, setNonAlcoholic] = useState([])
+    const [alcoholic, setAlcoholic] = useState([])
     const { store, actions } = useContext(Context);
     const params = useParams();
     return (
@@ -32,29 +53,22 @@ export const RecipeBrowser = ({data}) => {
             <div className="d-flex justify-content-center align-items-center">
                 <div className="input-group mb-3 mt-3" style={{ width: '500px', height: 'auto' }}>
                     <form onSubmit={onSubmit} className='input-group mb-3 mt-3"'>
+                    <div className="dropdown m-2">
+                            <a className="button dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown link
+                            </a>
+
+                            <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <li><a className="dropdown-item" href="#" onClick={fetchNonAlcoholic}>Non alcoholic drinks</a></li>
+                                <li><a className="dropdown-item" href="#" onClick={fetchAlcoholic}>Alcoholic drinks</a></li>
+                            </ul>
+                        </div>
                         <input type="text" className="form-control me-2 rounded" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" value={recipeInp} onChange={(e) => setRecipeInp(e.target.value)} />
                         <button className="button" type="button" id="button-addon1" value='' onClick={fetchRes} >Search</button>
                     </form>
                 </div>
             </div>
-            {/* <div className="container">
-                {store.recipe.map((rec, index) => <FullCards data={{
-                    value1: rec.strDrink,
-                    value2: rec.strInstructions,
-                    value3: rec.strDrinkThumb,
-                    value4: rec.strIngredient1,
-                    value5: rec.strIngredient2,
-                    value6: rec.strIngredient3,
-                    value7: rec.strIngredient4,
-                    value8: rec.strMeasure1,
-                    value9: rec.strMeasure2,
-                    value10: rec.strMeasure3,
-                    value11: rec.strMeasure4,
-                }}
-                    key={index}
-                />)}
-
-            </div> */}
+           
             <div className="container  d-flex flex-wrap">
             {recipe.map((rec , index)=>{
 		 
