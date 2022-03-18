@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import { Link, useParams, useLocation } from "react-router-dom";
 import { Context } from "../store/appContext";
-import rigoImage8 from "../../img/spain.jpg";
+import rigoImage8 from "../../img/italy.jpg";
 import rigoImage9 from "../../img/usa.jpg";
 export const Information = ({ rec }) => {
     var rec = useLocation().state;
