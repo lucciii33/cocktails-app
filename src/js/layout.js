@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
+
 import { Home } from "./views/home";
 import { Demo, Register } from "./views/register";
 import { Single } from "./views/single";
@@ -12,6 +13,7 @@ import { RandomDrink } from "./views/randomDrink";
 import { PopularDrinks } from "./component/popularDrinks";
 import { FullCards } from "./views/fullCards";
 import { Information } from "./views/information";
+import {RegisterSucc} from "./views/registersuccess"
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
@@ -48,6 +50,7 @@ const Layout = () => {
 							<RandomDrink  />
 						</Route>
 						<Route exact path="/information/:name" component={Information}/>
+						<Route exact path="/registersuccess" component={RegisterSucc}/>
 						<Route>
 							<h1>Not found!</h1>
 						</Route>

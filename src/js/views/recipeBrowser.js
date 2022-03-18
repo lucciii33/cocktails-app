@@ -3,9 +3,16 @@ import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { FullCards } from "./fullCards";
-import {Cards} from "./cards"
+import { Cards } from "./cards"
 
-export const RecipeBrowser = ({data}) => {
+export const RecipeBrowser = ({ data }) => {
+    const [recipe, setRecipe] = useState([])
+    const [recipeInp, setRecipeInp] = useState([])
+    const [nonAlcoholic, setNonAlcoholic] = useState([])
+    const [alcoholic, setAlcoholic] = useState([])
+    const { store, actions } = useContext(Context);
+    const params = useParams();
+
     const fetchRes = async () => {
         const res = await fetch(`https://thecocktaildb.com/api/json/v1/1/search.php?s=${recipeInp}`);
         const data = await res.json();
@@ -13,18 +20,31 @@ export const RecipeBrowser = ({data}) => {
         setRecipe(data.drinks)
         console.log(data.drinks);
     };
+
+    const getCocktailDetails = (cocktails) => {
+        cocktails.forEach((cocktail, ind) => {
+            //run fetch with cocktail.idDrink
+            fetch(`https://thecocktaildb.com/api/json/v1/1/lookup.php?i=${cocktail.idDrink}`)
+                .then(data => data.json())
+                .then(result => {
+                    console.log(result.drinks[0]);
+                    console.log(nonAlcoholic);
+                    setNonAlcoholic(ind);
+                })
+                .catch(error => console.error(error))
+        });
+        console.log(nonAlcoholic);
+    };
+
     const fetchNonAlcoholic = async () => {
         const res = await fetch('https://thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic');
         const data = await res.json();
-       let drinks= []
-            await data.drinks.map(async (e,index)=>{
-            let drink = await fetch(`https://thecocktaildb.com/api/json/v1/1/search.php?s=${e.strDrink}`)
-            let dataDrink = await drink.json();
-            drinks.push(dataDrink.drinks[0])
-        })
-        setRecipe(drinks)
-        console.log(drinks);
+
+        var nonDetailsCocktails = data.drinks;
+        console.log(data.drinks);
+        getCocktailDetails(data.drinks);
     };
+
     const fetchAlcoholic = async () => {
         const res = await fetch('https://thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic');
         const data = await res.json();
@@ -42,18 +62,12 @@ export const RecipeBrowser = ({data}) => {
         fetchRes()
     }
 
-    const [recipe, setRecipe] = useState([])
-    const [recipeInp, setRecipeInp] = useState([])
-    const [nonAlcoholic, setNonAlcoholic] = useState([])
-    const [alcoholic, setAlcoholic] = useState([])
-    const { store, actions } = useContext(Context);
-    const params = useParams();
     return (
         <div className="">
             <div className="d-flex justify-content-center align-items-center">
                 <div className="input-group mb-3 mt-3" style={{ width: '500px', height: 'auto' }}>
                     <form onSubmit={onSubmit} className='input-group mb-3 mt-3"'>
-                    <div className="dropdown m-2">
+                        <div className="dropdown m-2">
                             <a className="button dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                                 Dropdown link
                             </a>
@@ -68,21 +82,21 @@ export const RecipeBrowser = ({data}) => {
                     </form>
                 </div>
             </div>
-           
-            <div className="container  d-flex flex-wrap">
-            {recipe.map((rec , index)=>{
-		 
-			return (
-				<div key={index}>
-					<Cards  rec={rec} />
-					
-				</div>
 
-				
-			)	
-			})}
+            <div className="container  d-flex flex-wrap">
+                {recipe.map((rec, index) => {
+
+                    return (
+                        <div key={index}>
+                            <Cards rec={rec} />
+
+                        </div>
+
+
+                    )
+                })}
             </div>
-            
+
         </div>
     );
 };
