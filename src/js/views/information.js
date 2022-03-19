@@ -8,6 +8,7 @@ export const Information = ({ rec }) => {
     var rec = useLocation().state;
     const { store, actions } = useContext(Context);
     const[language, setLanguage] = useState("")
+    const[ingredients, setingredients] = useState("")
     const [icon, setIcon] = useState(false)
     const [addFav, setAddFav] = useState(0)
     const params = useParams();
@@ -26,11 +27,20 @@ export const Information = ({ rec }) => {
                             <p className="card-text">Ingredient 1 : {rec.strIngredient1}</p>
                             <p className="card-text">Ingredient 2 :{rec.strIngredient2}</p>
                             <p className="card-text">Ingredient 3 :{rec.strIngredient3}</p>
-                            <p className="card-text">Ingredient 4 :{rec.strIngredient4}</p>
+                            <p className="empty card-text">Ingredient 4 :{rec.strIngredient4}</p>
+                          {/*  <p className="empty card-text" style={{display: (ingredients)}}>ingredie{rec.strIngredient5=='null'?setingredients('none'):setingredients('dislpay')}</p> */}
+                            <p className="empty card-text">{rec.strIngredient6}</p>
+                            <p className="empty card-text">{rec.strIngredient7}</p>
+                            <p className="emptycard-text">{rec.strIngredient8}</p>
                             <p className="card-text">Measure 1 :{rec.strMeasure1}</p>
                             <p className="card-text">Measure 2 :{rec.strMeasure2}</p>
                             <p className="card-text">Measure 3 :{rec.strMeasure3}</p>
                             <p className="card-text">Measure 4 :{rec.strMeasure4}</p>
+                            <p className="card-text">Measure 1 :{rec.strMeasure5}</p>
+                            <p className="card-text">Measure 2 :{rec.strMeasure6}</p>
+                            <p className="card-text">Measure 3 :{rec.strMeasure7}</p>
+                            <p className="card-text">Measure 4 :{rec.strMeasure8}</p>
+                            
                         </div>
                     </div>
                 </div>

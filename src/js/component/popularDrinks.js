@@ -53,7 +53,9 @@ export const PopularDrinks= ({data}) => {
 
             </div> */}
             <div className="container d-flex flex-wrap">
-            {recipe.map((rec , index)=>{
+              {/*el slice para limitar las cartas a 8 items y el map para hacer el loop*/}
+            {recipe.slice(0,8)
+            .map((rec , index)=>{
 		 
 			return (
 				<div key={index}>

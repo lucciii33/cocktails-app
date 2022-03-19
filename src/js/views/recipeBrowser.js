@@ -29,7 +29,7 @@ export const RecipeBrowser = ({ data }) => {
                 .then(result => {
                     console.log(result.drinks[0]);
                     console.log(nonAlcoholic);
-                    setNonAlcoholic(ind);
+                    setNonAlcoholic([...nonAlcoholic, result.drinks[0]]);
                 })
                 .catch(error => console.error(error))
         });

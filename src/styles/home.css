@@ -54,3 +54,6 @@ body{
                 0 0 50px rgb(255,0,119);
     border-color: #C1436D;
   }
+.empty:empty{
+    display: none;
+}
