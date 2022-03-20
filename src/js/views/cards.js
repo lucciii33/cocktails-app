@@ -5,6 +5,8 @@ import { Context } from "../store/appContext";
 
 export const Cards = ({ rec }) => {
   const { store, actions } = useContext(Context);
+  const [icon, setIcon] = useState(false)
+  const [addFav, setAddFav] = useState(0)
   const params = useParams();
   return (
     <div className="container">
@@ -33,6 +35,20 @@ export const Cards = ({ rec }) => {
 						</Link>
             </div>
             <div className="col-2">
+            <button
+                onClick={() => {
+                  actions.addFav(rec);
+                  setIcon(!icon)
+                }}
+
+              >
+                {icon ? (
+                  <i className="fas fa-heart"></i>
+                ) : (
+                  <i className="far fa-heart"></i>
+                )}
+               
+              </button>
             </div>
           </div>
         </div>

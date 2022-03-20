@@ -80,6 +80,25 @@ export const RecipeBrowser = ({ data }) => {
                         <input type="text" className="form-control me-2 rounded" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" value={recipeInp} onChange={(e) => setRecipeInp(e.target.value)} />
                         <button className="button" type="button" id="button-addon1" value='' onClick={fetchRes} >Search</button>
                     </form>
+                    <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li className="nav-item dropdown">
+                            <button
+                                className="button nav-link dropdown-toggle"
+                                href="#"
+                                id="navbarDropdown"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                favorites {store.favorites.length}
+                            </button>
+                            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                {store.favorites.map((fav, i) => {
+                                    return <li key={i}>{fav.strDrink}<i className="fas fa-trash-alt m-2" onClick={() => actions.deleteFav(fav)}></i></li>;
+                                })}
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
