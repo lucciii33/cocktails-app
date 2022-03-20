@@ -7,12 +7,12 @@ import { Context } from "../store/appContext";
 import "../../styles/demo.css";
 
 export const SignIn = () => {
- function fun() {  
-	 	alert (" WELCOME! YOUR REGISTER HAVE BEEN SUCCED ");  
-	  }  
+	useEffect(()=>{
+	  alert (" WELCOME! YOUR REGISTER HAVE BEEN SUCCED ");  
+	}  
+	,[])
+ 
 	const { store, actions } = useContext(Context);
-	
-	fun()
 	return (
 		<div className="container border rounded border-danger bg-dark mt-4 mb-4 joshstyles" style={{ width: '500px', height: 'auto' }}>
 			<img className="rounded mx-auto d-block" src={rigoImage} style={{ width: '400px', height: 'auto' }} />
@@ -27,11 +27,14 @@ export const SignIn = () => {
 						<div className="invalid-feedback" data-sb-feedback="password:required">Password is required.</div>
 					</div>
 					<div className="d-grid mx-auto mb-3" style={{ width: '400px', height: 'auto' }}>
+					<Link to="/home">
 						<button className="button btn-lg" style={{ backgroundColor: '#C1436D', border: 'none' }} id="submitButton" type="submit" >Login</button>
+					</Link>
 					</div>
 				</form>
 			</div>
 			
 		</div>
 	);
+	
 };
