@@ -42,7 +42,7 @@ export const Home = () => (
 
 
 		<div className="container border rounded bg-dark mt-4 mb-4 joshstyles random-drink col-12 text-center" style={{ width: '400px', height: 'auto' }}>
-		<img src={rigoImage6} style={{ width: '250px', height: 'auto' }} />
+		<img src={rigoImage7} style={{ width: '250px', height: 'auto' }} />
 		<h2 className="left text-center">Bussines consulting</h2>
 
 		<p className="left text-center">Are you opening a bar? let us help you we are experts</p>
@@ -53,7 +53,7 @@ export const Home = () => (
 
 
 		<div className="container border rounded bg-dark mt-4 mb-4 joshstyles random-drink col-12 text-center" style={{ width: '400px', height: 'auto' }}>
-		<img src={rigoImage7} style={{ width: '250px', height: 'auto' }} />
+		<img src={rigoImage6} style={{ width: '250px', height: 'auto' }} />
 		<h2 className="left text-center">make a list here!</h2>
 
 		<p className="left text-center">ready to reat your cocktail list for your party?</p>
