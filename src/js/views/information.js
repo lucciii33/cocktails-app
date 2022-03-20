@@ -4,6 +4,7 @@ import { Link, useParams, useLocation } from "react-router-dom";
 import { Context } from "../store/appContext";
 import rigoImage8 from "../../img/italy.jpg";
 import rigoImage9 from "../../img/usa.jpg";
+import rigoImage10 from "../../img/german.jpg";
 export const Information = ({ rec }) => {
     var rec = useLocation().state;
     const { store, actions } = useContext(Context);
@@ -24,6 +25,8 @@ export const Information = ({ rec }) => {
                             <h5 class="card-title">{rec.strDrink}</h5>
                             <p class="card-text">Instructions: {
                             language=='italian'?rec.strInstructionsIT:rec.strInstructions}</p>
+                            <p className="">instructions: {
+                            language == 'german'?rec.strInstructionsDE:rec.strInstructions}</p> 
                             <p className="card-text">Ingredient 1 : {rec.strIngredient1}</p>
                             <p className="card-text">Ingredient 2 :{rec.strIngredient2}</p>
                             <p className="card-text">Ingredient 3 :{rec.strIngredient3}</p>
@@ -47,6 +50,9 @@ export const Information = ({ rec }) => {
                 <div className="d-flex justify-content-end">
 
                     {rec.strInstructionsIT && language!='italian' && <img src={rigoImage8} style={{ width: '50px', height: 'auto' }} onClick={()=>{setLanguage('italian')}}/>}
+                    {language!=""&& <img src={rigoImage9} style={{ width: '50px', height: 'auto' }} onClick={()=>{setLanguage('')} }/>}
+
+                    {rec.strInstructionsDE && language!='german' && <img src={rigoImage10} style={{ width: '50px', height: 'auto' }} onClick={()=>{setLanguage('german')}}/>}
                     {language!=""&& <img src={rigoImage9} style={{ width: '50px', height: 'auto' }} onClick={()=>{setLanguage('')} }/>}
 
 

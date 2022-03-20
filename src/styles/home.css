@@ -57,3 +57,14 @@ body{
 .empty:empty{
     display: none;
 }
+
+.boxes{
+    margin: 20px;
+    margin-top: 150px;
+    background-color: rgb(198,177,198);
+    overflow: hidden;
+    height: 480px;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0px 12px 18px -6px rgb(0,0,0,0.3);
+ }

@@ -46,7 +46,7 @@ export const Home = () => (
 		<h2 className="left text-center">Bussines consulting</h2>
 
 		<p className="left text-center">Are you opening a bar? let us help you we are experts</p>
-		<Link to="/randomDrink">
+		<Link to="/bussines">
 			<button className="button text-center m-2" style={{ backgroundColor: '#C1436D', border: 'none' }}>Get a Random Drink</button>
 		</Link>
 		</div>

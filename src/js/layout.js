@@ -13,7 +13,7 @@ import { RandomDrink } from "./views/randomDrink";
 import { PopularDrinks } from "./component/popularDrinks";
 import { FullCards } from "./views/fullCards";
 import { Information } from "./views/information";
-import {RegisterSucc} from "./views/registersuccess"
+import {Bussines} from "./views/bussines"
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
@@ -50,7 +50,7 @@ const Layout = () => {
 							<RandomDrink  />
 						</Route>
 						<Route exact path="/information/:name" component={Information}/>
-						<Route exact path="/registersuccess" component={RegisterSucc}/>
+						<Route exact path="/bussines" component={Bussines}/>
 						<Route>
 							<h1>Not found!</h1>
 						</Route>
