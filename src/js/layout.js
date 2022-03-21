@@ -51,7 +51,7 @@ const Layout = () => {
 							<RandomDrink  />
 						</Route>
 						<Route exact path="/information/:name" component={Information}/>
-						<Route exact path="/shoppinglist" component={ShoppingList}/>
+						<Route exact path="/shoppinglist/" component={ShoppingList}/>
 						<Route exact path="/bussines" component={Bussines}/>
 						<Route>
 							<h1>Not found!</h1>

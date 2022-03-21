@@ -18,7 +18,7 @@ export const Home = () => (
 					<Link to="/recipeBrowser">
 					<button className="button text-center" style={{ backgroundColor: '#C1436D', border: 'none' }}>Recipe Browser</button>
 					</Link>
-					<Link to="/register">
+					<Link to="/popularDrinks">
 						<button className="button text-center" style={{ backgroundColor: '#C1436D', border: 'none' }}>Popular cocktails</button>
 					</Link>
 				</div>

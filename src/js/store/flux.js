@@ -27,6 +27,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 				newUser.push(user)
 				setStore({ users: newUser });
 			},
+			LogInUsers: (userLogged)=>{
+				const log = getStore().loggId;
+				log.push(userLogged)
+				setStore({ loggId: log });
+			},
 			addFav: (fav) => {
 				//get the store
 				const newFavorites = getStore().favorites;

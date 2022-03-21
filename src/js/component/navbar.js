@@ -12,10 +12,6 @@ export const Navbar = () => {
 			<div className="d-flex col-8 justify-content-end">
 
 				<nav className="navbar m-2">
-						<form className="d-flex m-2">
-							<input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-								<button className="button" type="submit">Search</button>
-						</form>
 					<Link to="/register">
 							<button className="button m-2">Register</button>
 					</Link>
