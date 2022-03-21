@@ -14,6 +14,7 @@ import { PopularDrinks } from "./component/popularDrinks";
 import { FullCards } from "./views/fullCards";
 import { Information } from "./views/information";
 import {Bussines} from "./views/bussines"
+import {ShoppingList} from "./views/shoppinglist"
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
@@ -50,6 +51,7 @@ const Layout = () => {
 							<RandomDrink  />
 						</Route>
 						<Route exact path="/information/:name" component={Information}/>
+						<Route exact path="/shoppinglist" component={ShoppingList}/>
 						<Route exact path="/bussines" component={Bussines}/>
 						<Route>
 							<h1>Not found!</h1>

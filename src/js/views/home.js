@@ -19,7 +19,7 @@ export const Home = () => (
 					<button className="button text-center" style={{ backgroundColor: '#C1436D', border: 'none' }}>Recipe Browser</button>
 					</Link>
 					<Link to="/register">
-						<button className="button text-center" style={{ backgroundColor: '#C1436D', border: 'none' }}>Sign up now!</button>
+						<button className="button text-center" style={{ backgroundColor: '#C1436D', border: 'none' }}>Popular cocktails</button>
 					</Link>
 				</div>
 			</div>
@@ -47,7 +47,7 @@ export const Home = () => (
 
 		<p className="left text-center">Are you opening a bar? let us help you we are experts</p>
 		<Link to="/bussines">
-			<button className="button text-center m-2" style={{ backgroundColor: '#C1436D', border: 'none' }}>Get a Random Drink</button>
+			<button className="button text-center m-2" style={{ backgroundColor: '#C1436D', border: 'none' }}>see more info</button>
 		</Link>
 		</div>
 
@@ -56,9 +56,9 @@ export const Home = () => (
 		<img src={rigoImage6} style={{ width: '250px', height: 'auto' }} />
 		<h2 className="left text-center">make a list here!</h2>
 
-		<p className="left text-center">ready to reat your cocktail list for your party?</p>
-		<Link to="/randomDrink">
-			<button className="button text-center m-2" style={{ backgroundColor: '#C1436D', border: 'none' }}>Get a Random Drink</button>
+		<p className="left text-center">and get ready for friday night</p>
+		<Link to="/shoppinglist">
+			<button className="button text-center m-2" style={{ backgroundColor: '#C1436D', border: 'none' }}>Lest do this!</button>
 		</Link>
 		</div>
 
