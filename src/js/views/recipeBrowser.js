@@ -21,28 +21,43 @@ export const RecipeBrowser = ({ data }) => {
         console.log(data.drinks);
     };
 
-    const getCocktailDetails = (cocktails) => {
-        cocktails.forEach((cocktail, ind) => {
-            //run fetch with cocktail.idDrink
-            fetch(`https://thecocktaildb.com/api/json/v1/1/lookup.php?i=${cocktail.idDrink}`)
-                .then(data => data.json())
-                .then(result => {
-                    console.log(result.drinks[0]);
-                    console.log(nonAlcoholic);
-                    setNonAlcoholic([...nonAlcoholic, result.drinks[0]]);
-                })
-                .catch(error => console.error(error))
-        });
-        console.log(nonAlcoholic);
-    };
+    // const getCocktailDetails = async (cocktails) => {
+    //     cocktails.map((cocktail, ind) => {
+    //         //run fetch with cocktail.idDrink
+    //         fetch(`https://thecocktaildb.com/api/json/v1/1/lookup.php?i=${cocktail.idDrink}`)
+    //             .then(data => data.json())
+    //             .then(result => {
+    //                 console.log(result.drinks[0]);
+    //                 console.log(localRecipes);
+    //                 return result.drinks[0];
+    //                 // console.log(nonAlcoholic);
+    //                 // setNonAlcoholic([...nonAlcoholic, result.drinks[0]]);
+    //             })
+    //             .catch(error => console.error(error))
+    //     });
+    // };
 
     const fetchNonAlcoholic = async () => {
         const res = await fetch('https://thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic');
         const data = await res.json();
+        let localRecipes = []; 
+        // var noDetailsCocktails = data.drinks;
+        // console.log(data.drinks);
+        // getCocktailDetails(data.drinks);
 
-        var nonDetailsCocktails = data.drinks;
-        console.log(data.drinks);
-        getCocktailDetails(data.drinks);
+        for(let cocktail of data.drinks){
+            fetch(`https://thecocktaildb.com/api/json/v1/1/lookup.php?i=${cocktail.idDrink}`)
+            .then(data => data.json())
+            .then(result => {
+                console.log(result.drinks[0]);
+                localRecipes.push(result.drinks[0]);
+                console.log(localRecipes);
+                // console.log(nonAlcoholic);
+                // setNonAlcoholic([...nonAlcoholic, result.drinks[0]]);
+            })
+            .catch(error => console.error(error)) 
+        }
+        setRecipe(localRecipes);
     };
 
     const fetchAlcoholic = async () => {
