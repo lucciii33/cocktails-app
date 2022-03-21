@@ -46,8 +46,7 @@ export const Cards = ({ rec }) => {
                   <i className="fas fa-heart"></i>
                 ) : (
                   <i className="far fa-heart"></i>
-                )}
-               
+                )}  
               </button>
             </div>
           </div>
