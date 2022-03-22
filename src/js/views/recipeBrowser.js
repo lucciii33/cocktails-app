@@ -144,7 +144,7 @@ export const RecipeBrowser = ({ data }) => {
                         >
                             Search
                         </button>
-                    </form>
+
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li className="nav-item dropdown">
                             <button
@@ -172,6 +172,7 @@ export const RecipeBrowser = ({ data }) => {
                             </ul>
                         </li>
                     </ul>
+                    </form>
                 </div>
             </div>
 

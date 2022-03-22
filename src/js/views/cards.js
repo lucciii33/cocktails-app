@@ -11,7 +11,7 @@ export const Cards = ({ rec }) => {
   return (
     <div className="container">
       <div className="card " style={{ minWidth: "18rem", maxWidth: "22rem", minHeight: "16rem", margin: '0.2rem', marginTop: '1.5rem',padding: '10px', boxShadow: '5px 10px 18px #6A5ADF'}}>
-        <img src={rec.strDrinkThumb} style={{width: "100%", height: '12rem', objectFit: "cover"}}/>
+        <img className="imageHome" src={rec.strDrinkThumb} style={{width: "100%", height: '12rem', objectFit: "cover"}}/>
         <div className="card-body">
           <h5 className="card-title">{rec.strDrink}</h5>
           <p className="card-text"></p>
@@ -19,12 +19,6 @@ export const Cards = ({ rec }) => {
           <p></p>
           <p className="card-text">Alcoholic: {rec.strAlcoholic}</p>
           <p className="card-text">Glass Type: {rec.strGlass}</p>
-          {/* <p className="card-text">Ingredient 3 :{rec.strIngredient3}</p>
-          <p className="card-text">Ingredient 4 :{rec.strIngredient4}</p>
-          <p className="card-text">Measure 1 :{rec.strMeasure1}</p>
-          <p className="card-text">Measure 2 :{rec.strMeasure2}</p>
-          <p className="card-text">Measure 3 :{rec.strMeasure3}</p>
-          <p className="card-text">Measure 4 :{rec.strMeasure4}</p> */}
           <div className="row">
 
             <div className="col-10">
