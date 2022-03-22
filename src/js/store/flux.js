@@ -5,6 +5,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			users : [],
 			loggId: [],
 			favorites: [],
+			shopingList: [],
 		},
 		actions: {
 			// getData: (recipe)=>{
@@ -35,12 +36,24 @@ const getState = ({ getStore, getActions, setStore }) => {
 				//reset the global store
 				setStore({ favorites: newFavorites });
 			},
+
+			
 		
 		  deleteFav: (fav)=>{
 			var deleteFavo = getStore().favorites;
 			let delet = deleteFavo.filter((element)=>element!==fav)
 			setStore({ favorites: delet });
 		  },
+
+		  addToShopingList : (list) => {
+			  //get the store
+				const newList = getStore().shopingList;
+				console.log(newList);
+				newList.push(list)
+		
+				//reset the global store
+				setStore({ shopingList: newList });
+		  }
 
 		}
 	};

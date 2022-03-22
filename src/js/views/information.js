@@ -5,6 +5,8 @@ import { Context } from "../store/appContext";
 import rigoImage8 from "../../img/italy.jpg";
 import rigoImage9 from "../../img/usa.jpg";
 import rigoImage10 from "../../img/german.jpg";
+
+
 export const Information = ({ rec }) => {
     var rec = useLocation().state;
     const { store, actions } = useContext(Context);
@@ -27,22 +29,22 @@ export const Information = ({ rec }) => {
                             language=='italian'?rec.strInstructionsIT:rec.strInstructions}</p>
                             <p className="">instructions: {
                             language == 'german'?rec.strInstructionsDE:rec.strInstructions}</p> 
-                            <p className="card-text">Ingredient 1 : {rec.strIngredient1}</p>
-                            <p className="card-text">Ingredient 2 :{rec.strIngredient2}</p>
-                            <p className="card-text">Ingredient 3 :{rec.strIngredient3}</p>
-                            <p className="empty card-text">Ingredient 4 :{rec.strIngredient4}</p>
-                          {/*  <p className="empty card-text" style={{display: (ingredients)}}>ingredie{rec.strIngredient5=='null'?setingredients('none'):setingredients('dislpay')}</p> */}
-                            <p className="empty card-text">{rec.strIngredient6}</p>
-                            <p className="empty card-text">{rec.strIngredient7}</p>
-                            <p className="emptycard-text">{rec.strIngredient8}</p>
-                            <p className="card-text">Measure 1 :{rec.strMeasure1}</p>
-                            <p className="card-text">Measure 2 :{rec.strMeasure2}</p>
-                            <p className="card-text">Measure 3 :{rec.strMeasure3}</p>
-                            <p className="card-text">Measure 4 :{rec.strMeasure4}</p>
-                            <p className="card-text">Measure 1 :{rec.strMeasure5}</p>
-                            <p className="card-text">Measure 2 :{rec.strMeasure6}</p>
-                            <p className="card-text">Measure 3 :{rec.strMeasure7}</p>
-                            <p className="card-text">Measure 4 :{rec.strMeasure8}</p>
+                            <p className="card-text">Ingredient 1: {rec.strIngredient1}</p>
+                            <p className="card-text">Ingredient 2: {rec.strIngredient2}</p>
+                            <p className="card-text">Ingredient 3: {rec.strIngredient3}</p>
+                            <p className="empty card-text">Ingredient 4: {rec.strIngredient4}</p>
+                            <p className="empty card-text">Ingredient 5: {rec.strIngredient5}</p>
+                            <p className="empty card-text">Ingredient 6: {rec.strIngredient6}</p>
+                            <p className="empty card-text">Ingredient 7: {rec.strIngredient7}</p>
+                            <p className="emptycard-text">Ingredient 8: {rec.strIngredient8}</p>
+                            <p className="card-text">Measure 1: {rec.strMeasure1}</p>
+                            <p className="card-text">Measure 2: {rec.strMeasure2}</p>
+                            <p className="card-text">Measure 3: {rec.strMeasure3}</p>
+                            <p className="card-text">Measure 4: {rec.strMeasure4}</p>
+                            <p className="card-text">Measure 5: {rec.strMeasure5}</p>
+                            <p className="card-text">Measure 6: {rec.strMeasure6}</p>
+                            <p className="card-text">Measure 7: {rec.strMeasure7}</p>
+                            <p className="card-text">Measure 8: {rec.strMeasure8}</p>
                             
                         </div>
                     </div>
@@ -60,10 +62,13 @@ export const Information = ({ rec }) => {
 
             </div>
             <div className="d-flex">
-                <button className="button d-flex justify-content-between m-1">
-                    how many person drinking?
+                <button className="button d-flex justify-content-between m-1" onClick={() => {
+                  actions.addToShopingList(rec);
+                  
+                }}>
+                    Add to Shopping List
                 </button>
-                <input type='number' value='number' className="rounded-3" style={{ width: '5rem' }} ></input>
+                {/* <input type='number' value='number' className="rounded-3" style={{ width: '5rem' }} ></input> */}
             </div>
         </div>
     );
