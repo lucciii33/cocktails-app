@@ -15,19 +15,19 @@ export const Bussines = ({ rec }) => {
        <img src={rigoImage13} style={{ width: '100px', height: 'auto' }} />
        <h2>Good recipes</h2>
          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
-         <button className="button">ask for service</button>
+          <Link to="/contacts"><button className="button">ask for service</button></Link>
        </div>
        <div className="boxes">
        <img src={rigoImage12} style={{ width: '100px', height: 'auto' }} />
           <h2>concept</h2>
          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
-         <button className="button">ask for service</button>
+          <Link to="/contacts"><button className="button">ask for service</button></Link>
        </div>
        <div className="boxes">
        <img src={rigoImage11} style={{ width: '100px', height: 'auto' }} />
        <h2>train staff</h2>
        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
-         <button className="button">ask for service</button>
+         <Link to="/contacts"><button className="button">ask for service</button></Link>
        </div>
     </div>
   );
