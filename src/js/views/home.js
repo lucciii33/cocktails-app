@@ -18,9 +18,9 @@ export const Home = () => (
 					<Link to="/recipeBrowser">
 					<button className="button text-center" style={{ backgroundColor: '#C1436D', border: 'none' }}>Recipe Browser</button>
 					</Link>
-					<Link to="/popularDrinks">
-						<button className="button text-center" style={{ backgroundColor: '#C1436D', border: 'none' }}>Popular cocktails</button>
-					</Link>
+					
+						<a href='#drinks' className="button text-center text-decoration-none" style={{ backgroundColor: '#C1436D', border: 'none' }}>Popular cocktails</a>
+				
 				</div>
 			</div>
 			<div className="col-sm-12 col-md-6 ">
@@ -64,7 +64,7 @@ export const Home = () => (
 
 		</div>
 
-		<h2 className="left text-center " style={{ marginTop:"4.5rem" }}>This Our Pooular Drinks</h2>
+		<h2 id='drinks' className="left text-center " style={{ marginTop:"4.5rem" }}>This Our Pooular Drinks</h2>
 
 	</div>
 );
