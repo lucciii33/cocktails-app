@@ -87,12 +87,12 @@ export const RecipeBrowser = ({ data }) => {
 
     return (
         <div className="">
-            <div className="d-flex justify-content-center align-items-center">
+            <div className="d-flex align-items-baseline justify-content-center">
                 <div
                     className="input-group mb-3 mt-3"
                     style={{ width: "600px", height: "auto" }}
                 >
-                    <form onSubmit={onSubmit} className='input-group mb-3 mt-3"'>
+                    <form onSubmit={onSubmit} className='input-group mb-3 mt-3'>
                         <div className="dropdown m-2">
                             <a
                                 className="button dropdown-toggle"
@@ -126,53 +126,57 @@ export const RecipeBrowser = ({ data }) => {
                                 </li>
                             </ul>
                         </div>
-                        <input
-                            type="text"
-                            className="form-control me-2 rounded"
-                            placeholder=""
-                            aria-label="Example text with button addon"
-                            aria-describedby="button-addon1"
-                            value={recipeInp}
-                            onChange={(e) => setRecipeInp(e.target.value)}
-                        />
-                        <button
-                            className="button m-2"
-                            type="button"
-                            id="button-addon1"
-                            value=""
-                            onClick={fetchRes}
-                            style={{borderRadius: '10px'}}
-                        >
-                            Search
-                        </button>
 
-                    <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li className="nav-item dropdown">
+                            <input
+                                type="text"
+                                className="form-control me-2 rounded"
+                                placeholder=""
+                                aria-label="Example text with button addon"
+                                aria-describedby="button-addon1"
+                                value={recipeInp}
+                                onChange={(e) => setRecipeInp(e.target.value)}
+                            />
                             <button
-                                className="button nav-link dropdown-toggle"
-                                href="#"
-                                id="navbarDropdown"
-                                role="button"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false"
+                                className="button m-2"
+                                type="button"
+                                id="button-addon1"
+                                value=""
+                                onClick={fetchRes}
+                                style={{ borderRadius: '10px' }}
                             >
-                                favorites {store.favorites.length}
+                                Search
                             </button>
-                            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                {store.favorites.map((fav, i) => {
-                                    return (
-                                        <li key={i}>
-                                           <Link to={{ pathname: "information/" + fav.strDrink, state:fav}}>{fav.strDrink}</Link>  
-                                            <i
-                                                className="fas fa-trash-alt m-2"
-                                                onClick={() => actions.deleteFav(fav)}
-                                            ></i>
-                                        </li>
-                                    );
-                                })}
+                        
+                       
+
+                            <ul className="navbar-nav ">
+                                <li className="nav-item dropdown">
+                                    <button
+                                        className="button nav-link dropdown-toggle"
+                                        href="#"
+                                        id="navbarDropdown"
+                                        role="button"
+                                        data-bs-toggle="dropdown"
+                                        aria-expanded="false"
+                                    >
+                                        favorites {store.favorites.length}
+                                    </button>
+                                    <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        {store.favorites.map((fav, i) => {
+                                            return (
+                                                <li key={i}>
+                                                    <Link to={{ pathname: "information/" + fav.strDrink, state: fav }}>{fav.strDrink}</Link>
+                                                    <i
+                                                        className="fas fa-trash-alt m-2"
+                                                        onClick={() => actions.deleteFav(fav)}
+                                                    ></i>
+                                                </li>
+                                            );
+                                        })}
+                                    </ul>
+                                </li>
                             </ul>
-                        </li>
-                    </ul>
+                       
                     </form>
                 </div>
             </div>
