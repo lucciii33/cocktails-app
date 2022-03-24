@@ -7,11 +7,13 @@ export const Cards = ({ rec }) => {
   const { store, actions } = useContext(Context);
   const [icon, setIcon] = useState(false)
   const [addFav, setAddFav] = useState(0)
+  var isFav = store.favorites.find(fav => fav.name == rec.strDrink);
+  console.log("isFave", isFav);
   const params = useParams();
   return (
     <div className="container">
-      <div className="card " style={{ minWidth: "18rem", maxWidth: "22rem", minHeight: "16rem", margin: '0.2rem', marginTop: '1.5rem',padding: '10px', boxShadow: '5px 10px 18px #6A5ADF'}}>
-        <img className="imageHome" src={rec.strDrinkThumb} style={{width: "100%", height: '12rem', objectFit: "cover"}}/>
+      <div className="card " style={{ minWidth: "18rem", maxWidth: "22rem", minHeight: "16rem", margin: '0.2rem', marginTop: '1.5rem', padding: '10px', boxShadow: '5px 10px 18px #6A5ADF' }}>
+        <img className="imageHome" src={rec.strDrinkThumb} style={{ width: "100%", height: '12rem', objectFit: "cover" }} />
         <div className="card-body">
           <h5 className="card-title">{rec.strDrink}</h5>
           <p className="card-text"></p>
@@ -22,14 +24,14 @@ export const Cards = ({ rec }) => {
           <div className="row">
 
             <div className="col-10">
-            <Link to={{ pathname: "information/" + rec.name, state:rec}}>
+              <Link to={{ pathname: "information/" + rec.name, state: rec }}>
                 <button className="btn btn-primary d-flex justify-content-between m-1">
                   See Instructions
                 </button>
-						</Link>
+              </Link>
             </div>
             <div className="col-2">
-            <button
+              <button
                 onClick={() => {
                   actions.addFav(rec);
                   setIcon(!icon)
@@ -40,7 +42,7 @@ export const Cards = ({ rec }) => {
                   <i className="fas fa-heart" ></i>
                 ) : (
                   <i className="far fa-heart"></i>
-                )}  
+                )}
               </button>
             </div>
           </div>

@@ -79,14 +79,7 @@ body{
 .labelTodo{
     color: white;
 }
-@media screen and (min-width: 300px) {
-    .imageHome{
-        height:40px;
-        width: 40px;
-    }
-  }
-
-  @media screen and (min-width: 390px) {
+ @media screen and (min-width: 390px) {
     .button{
         justify-content: center;
         align-items: center;

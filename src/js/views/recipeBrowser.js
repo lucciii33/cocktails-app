@@ -141,6 +141,7 @@ export const RecipeBrowser = ({ data }) => {
                             id="button-addon1"
                             value=""
                             onClick={fetchRes}
+                            style={{borderRadius: '10px'}}
                         >
                             Search
                         </button>
