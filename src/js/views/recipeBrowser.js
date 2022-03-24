@@ -90,7 +90,7 @@ export const RecipeBrowser = ({ data }) => {
             <div className="d-flex justify-content-center align-items-center">
                 <div
                     className="input-group mb-3 mt-3"
-                    style={{ width: "500px", height: "auto" }}
+                    style={{ width: "600px", height: "auto" }}
                 >
                     <form onSubmit={onSubmit} className='input-group mb-3 mt-3"'>
                         <div className="dropdown m-2">
@@ -136,7 +136,7 @@ export const RecipeBrowser = ({ data }) => {
                             onChange={(e) => setRecipeInp(e.target.value)}
                         />
                         <button
-                            className="button"
+                            className="button m-2"
                             type="button"
                             id="button-addon1"
                             value=""
@@ -161,7 +161,7 @@ export const RecipeBrowser = ({ data }) => {
                                 {store.favorites.map((fav, i) => {
                                     return (
                                         <li key={i}>
-                                            {fav.strDrink}
+                                           <Link to={{ pathname: "information/" + fav.strDrink, state:fav}}>{fav.strDrink}</Link>  
                                             <i
                                                 className="fas fa-trash-alt m-2"
                                                 onClick={() => actions.deleteFav(fav)}

@@ -37,7 +37,7 @@ export const Cards = ({ rec }) => {
 
               >
                 {icon ? (
-                  <i className="fas fa-heart"></i>
+                  <i className="fas fa-heart" ></i>
                 ) : (
                   <i className="far fa-heart"></i>
                 )}  
