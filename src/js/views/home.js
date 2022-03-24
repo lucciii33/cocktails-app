@@ -29,7 +29,7 @@ export const Home = () => (
 		</div>
 		<div className="d-flex row">
 
-		<div className="col-sm-12 container border rounded bg-dark mt-4 mb-4 joshstyles random-drink col-12 text-center" style={{ width: '400px', height: 'auto' }}>
+		<div className="col-sm-12 container border rounded bg-dark mt-4 mb-4 joshstyles random-drink  text-center" style={{ width: '400px', height: 'auto' }}>
 		<img src={rigoImage5} style={{ width: '250px', height: 'auto' }} />
 		<h2 className="left text-center">Don't know what to drink?</h2>
 
@@ -41,7 +41,7 @@ export const Home = () => (
 
 
 
-		<div className="col-sm-12 container border rounded bg-dark mt-4 mb-4 joshstyles random-drink col-12 text-center" style={{ width: '400px', height: 'auto' }}>
+		<div className="col-sm-12 container border rounded bg-dark mt-4 mb-4 joshstyles random-drink  text-center" style={{ width: '400px', height: 'auto' }}>
 		<img src={rigoImage7} style={{ width: '250px', height: 'auto' }} />
 		<h2 className="left text-center">Bussines consulting</h2>
 
@@ -52,7 +52,7 @@ export const Home = () => (
 		</div>
 
 
-		<div className=" col-sm-12 container border rounded bg-dark mt-4 mb-4 joshstyles random-drink col-12 text-center" style={{ width: '400px', height: 'auto' }}>
+		<div className=" col-sm-12 container border rounded bg-dark mt-4 mb-4 joshstyles random-drink  text-center" style={{ width: '400px', height: 'auto' }}>
 		<img src={rigoImage6} style={{ width: '250px', height: 'auto' }} />
 		<h2 className="left text-center">make a list here!</h2>
 
