@@ -18,7 +18,7 @@ export const Information = ({ rec }) => {
             <div className="card mb-3" style={{ maxWidth: '1100px' }}>
                 <div className="row g-0">
                     <div className="col-md-4">
-                        <img src={rec.strDrinkThumb} className="img-fluid rounded-start m-1" alt="..." style={{ width: '450px', height: '400px' }} />
+                        <img src={rec.strDrinkThumb} className="img-fluid rounded-start m-1" alt="..." style={{ width: '100%', height: 'auto' }} />
                     </div>
                     <div className="col-md-8">
                         <div className="card-body">
@@ -45,12 +45,16 @@ export const Information = ({ rec }) => {
                         </div>
                     </div>
                 </div>
-                <div className="d-flex justify-content-end">
+                <div className="d-flex justify-content-end m-2 p-2">
+                    <div className="m-2">
 
-                    {rec.strInstructionsIT && language!='italian' && <img src={rigoImage8} style={{ width: '50px', height: 'auto' }} onClick={()=>{setLanguage('italian')}}/>}
+                    {rec.strInstructionsIT && language!='italian' && <img src={rigoImage8} style={{ width: '60px', height: 'auto', borderRadius: '40px'}} onClick={()=>{setLanguage('italian')}}/>}
                     {language!=""&& <img src={rigoImage9} style={{ width: '50px', height: 'auto' }} onClick={()=>{setLanguage('')} }/>}
+                    </div>
+                    <div className="m-2">
 
-                    {rec.strInstructionsDE && language!='german' && <img src={rigoImage10} style={{ width: '50px', height: 'auto' }} onClick={()=>{setLanguage('german')}}/>}
+                    {rec.strInstructionsDE && language!='german' && <img src={rigoImage10} style={{ width: '60px', height: 'auto', borderRadius: '40px' }} onClick={()=>{setLanguage('german')}}/>}
+                    </div>
 
 
                 </div>
