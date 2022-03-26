@@ -181,7 +181,7 @@ export const RecipeBrowser = ({ data }) => {
                 </div>
             </div>
 
-            <div className="container d-flex flex-wrap">
+            <div className="container d-flex flex-wrap justify-content-center">
                 {recipe
                     ? recipe.map((rec, index) => {
                         return (

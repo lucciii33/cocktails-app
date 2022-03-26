@@ -28,31 +28,10 @@ export const PopularDrinks= ({data}) => {
     const { store, actions } = useContext(Context);
     const params = useParams();
     return (
-        <div className="me-sm-3">
+        <div className="">
             <div className="d-flex justify-content-center align-items-center">
-                <div className="input-group mb-3 mt-3" style={{ width: '500px', height: 'auto' }}>
-                
-                </div>
             </div>
-            {/* <div className="container">
-                {store.recipe.map((rec, index) => <FullCards data={{
-                    value1: rec.strDrink,
-                    value2: rec.strInstructions,
-                    value3: rec.strDrinkThumb,
-                    value4: rec.strIngredient1,
-                    value5: rec.strIngredient2,
-                    value6: rec.strIngredient3,
-                    value7: rec.strIngredient4,
-                    value8: rec.strMeasure1,
-                    value9: rec.strMeasure2,
-                    value10: rec.strMeasure3,
-                    value11: rec.strMeasure4,
-                }}
-                    key={index}
-                />)}
-
-            </div> */}
-            <div className="container d-flex flex-wrap">
+            <div className="container d-flex flex-wrap justify-content-center">
               {/*el slice para limitar las cartas a 8 items y el map para hacer el loop*/}
             {recipe.slice(0,8)
             .map((rec , index)=>{
