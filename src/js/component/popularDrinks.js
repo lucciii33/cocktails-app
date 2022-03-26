@@ -28,7 +28,7 @@ export const PopularDrinks= ({data}) => {
     const { store, actions } = useContext(Context);
     const params = useParams();
     return (
-        <div className="">
+        <div className="me-sm-3">
             <div className="d-flex justify-content-center align-items-center">
                 <div className="input-group mb-3 mt-3" style={{ width: '500px', height: 'auto' }}>
                 
