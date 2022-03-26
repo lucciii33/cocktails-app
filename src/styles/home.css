@@ -1,6 +1,14 @@
 body{
     background: #0F0C24;
 }
+.navbar{
+    background: #A350A3;
+}
+.logo{
+    border-bottom: 2px solid #C1436D;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
 .left{
     color:#C1436D
 }
@@ -32,6 +40,9 @@ body{
 
 .joshstyles {
     border-color: #C1436D !important;
+}
+.joshstyles2 {
+    border-color: #A350A3!important;
 }
 
 .my-button {
@@ -71,6 +82,9 @@ body{
     justify-content: center;
     border: 1px solid #C1436D;
     color: white;
+ }
+ .boxBussines {
+     background-color: #A350A3;
  }
  .boxTodo{
     height: 580px;

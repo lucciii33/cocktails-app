@@ -149,6 +149,8 @@ export const RecipeBrowser = ({ data }) => {
                         
                        
 
+                       
+                    </form>
                             <ul className="navbar-nav ">
                                 <li className="nav-item dropdown">
                                     <button
@@ -176,8 +178,6 @@ export const RecipeBrowser = ({ data }) => {
                                     </ul>
                                 </li>
                             </ul>
-                       
-                    </form>
                 </div>
             </div>
 

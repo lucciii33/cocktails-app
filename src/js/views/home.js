@@ -37,7 +37,7 @@ export const Home = () => (
 
 		<div className="d-flex row">
 
-		<div className="col-sm-12 col-lg-4 container border rounded bg-dark mt-4 mb-4 joshstyles random-drink  text-center" style={{ width: '400px', height: 'auto' }}>
+		<div className="col-sm-12 col-lg-4 container border rounded mt-4 mb-4 joshstyles random-drink  text-center" style={{ width: '400px', height: 'auto' }}>
 		<img src={rigoImage5} style={{ width: '250px', height: 'auto' }} />
 		<h2 className="left text-center">Don't know what to drink?</h2>
 
@@ -49,9 +49,9 @@ export const Home = () => (
 
 
 
-		<div className="col-sm-12 col-lg-4 container border rounded bg-dark mt-4 mb-4 joshstyles random-drink col-12 text-center" style={{ width: '400px', height: 'auto' }}>
+		<div className="boxBussines col-sm-12 col-lg-4 container border rounded mt-4 mb-4 joshstyles2 col-12 text-center" style={{ width: '400px', height: 'auto' }}>
 		<img src={rigoImage7} style={{ width: '250px', height: 'auto' }} />
-		<h2 className="left text-center">Bussines consulting</h2>
+		<h2 className="left text-center" style={{color: '#0F0C24'}}>Bussines consulting</h2>
 
 		<p className="left text-center">Are you opening a bar? let us help you we are experts</p>
 		<Link to="/bussines">
