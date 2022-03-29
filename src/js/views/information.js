@@ -68,6 +68,19 @@ export const Information = ({ rec }) => {
                 }}>
                     Add to Shopping List
                 </button>
+                <Link to="/">
+                    <button className="button d-flex justify-content-between m-1" >
+                        Back to Home
+                    </button>
+                </Link>
+                <Link to="/recipeBrowser">
+                    <button className="button d-flex justify-content-between m-1" >
+                        Search More Drinks
+                    </button>
+                </Link>
+                <Link to="/shopinglist">
+					<button className="button d-flex justify-content-between m-1">Check Your Shopping List</button>
+				</Link>
                 {/* <input type='number' value='number' className="rounded-3" style={{ width: '5rem' }} ></input> */}
             </div>
         </div>

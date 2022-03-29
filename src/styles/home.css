@@ -68,3 +68,11 @@ body{
     border-radius: 15px;
     box-shadow: 0px 12px 18px -6px rgb(0,0,0,0.3);
  }
+
+ .line-through {
+     text-decoration: line-through;
+ }
+
+ .text-4xl {
+     font-size: 22px;
+ }
