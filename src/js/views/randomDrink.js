@@ -20,8 +20,8 @@ export const RandomDrink = () => {
     const [random, setRandom] = useState([])
     const params = useParams();
     return (
-        <div className="d-flex justify-content-center row">
-            <div className="col-sm-12 col-md-6">
+        <div>{(random )?( <div className="d-flex justify-content-center row">
+           <div className="col-sm-12 col-md-6">
                 <div className="" style={{ width: '500px', height: 'auto' }}>
                     <button className="my-button m-5 " type="button" id="button-addon1" value='' onClick={fetchRes} ><i className="fas fa-cocktail"  style={{fontSize: '3em'}}></i></button>
                 </div>
@@ -35,8 +35,9 @@ export const RandomDrink = () => {
 				</div>
 			)	
 			})}
-            </div>
+            </div> 
             
+        </div> ): <h1>loading...</h1>}
         </div>
     );
 };

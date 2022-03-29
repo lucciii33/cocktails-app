@@ -16,40 +16,28 @@ export const Information = ({ rec }) => {
     const [addFav, setAddFav] = useState(0)
     const params = useParams();
     return (
-        <div className="container mt-3">
+        <div className="container-fluid mt-3">
             <div className="card mb-3" style={{ maxWidth: '1100px' }}>
                 <div className="row g-0">
                     <div className="col-md-4">
-                        <img src={rec.strDrinkThumb} className="img-fluid rounded-start m-1" alt="..." style={{ width: '100%', height: 'auto' }} />
+                        <img src={rec.strDrinkThumb} className="img-fluid rounded-start" alt="..." style={{ width: 'auto', height: '100%' }} />
                     </div>
                     <div className="col-md-8">
                         <div className="card-body">
-                            <h5 class="card-title">{rec.strDrink}</h5>
-                            <p class="card-text">Instructions: {
-                            language=='italian'?rec.strInstructionsIT:rec.strInstructions}</p>
-                            <p className="">instructions: {
-                            language == 'german'?rec.strInstructionsDE:rec.strInstructions}</p> 
-                            <p className="card-text">Ingredient 1: {rec.strIngredient1}</p>
-                            <p className="card-text">Ingredient 2: {rec.strIngredient2}</p>
-                            <p className="card-text">Ingredient 3: {rec.strIngredient3}</p>
-                            <p className="empty card-text">Ingredient 4: {rec.strIngredient4}</p>
-                            <p className="empty card-text">Ingredient 5: {rec.strIngredient5}</p>
-                            <p className="empty card-text">Ingredient 6: {rec.strIngredient6}</p>
-                            <p className="empty card-text">Ingredient 7: {rec.strIngredient7}</p>
-                            <p className="emptycard-text">Ingredient 8: {rec.strIngredient8}</p>
-                            <p className="card-text">Measure 1: {rec.strMeasure1}</p>
-                            <p className="card-text">Measure 2: {rec.strMeasure2}</p>
-                            <p className="card-text">Measure 3: {rec.strMeasure3}</p>
-                            <p className="card-text">Measure 4: {rec.strMeasure4}</p>
-                            <p className="card-text">Measure 5: {rec.strMeasure5}</p>
-                            <p className="card-text">Measure 6: {rec.strMeasure6}</p>
-                            <p className="card-text">Measure 7: {rec.strMeasure7}</p>
-                            <p className="card-text">Measure 8: {rec.strMeasure8}</p>
+                            <h5 class="card-title border-bottom border-dark">{rec.strDrink}</h5>
+                            <p class="card-text border-bottom border-dark">Instructions: {language=='italian'?rec.strInstructionsIT:language == 'german'?rec.strInstructionsDE:rec.strInstructions}</p>
+                            <p className="card-text"><strong>{rec.strIngredient1} </strong> {rec.strMeasure1}:</p>
+                            <p className="card-text"> <strong>{rec.strIngredient2} </strong> {rec.strMeasure2}</p>
+                            <p className="card-text"> <strong>{rec.strIngredient3} </strong> {rec.strMeasure3} </p>
+                            <p className="empty card-text"><strong>{rec.strIngredient4}</strong>  {rec.strMeasure4}</p>
+                            <p className="empty card-text"> <strong>{rec.strIngredient5}</strong>  {rec.strMeasure5}</p>
+                            <p className="empty card-text"> <strong>{rec.strIngredient6}</strong>   {rec.strMeasure6}</p>
+                            <p className="empty card-text"> <strong>{rec.strIngredient7}</strong>   {rec.strMeasure7}</p>
+                            <p className="emptycard-text"> <strong>{rec.strIngredient8}</strong>  {rec.strMeasure8}</p>
                             
                         </div>
-                    </div>
-                </div>
-                <div className="d-flex justify-content-end m-2 p-2">
+
+                 <div className="d-flex justify-content-end">
                     <div className="m-2">
 
                     {rec.strInstructionsIT && language!='italian' && <img src={rigoImage8} style={{ width: '60px', height: 'auto', borderRadius: '40px'}} onClick={()=>{setLanguage('italian')}}/>}
@@ -60,6 +48,9 @@ export const Information = ({ rec }) => {
                     {rec.strInstructionsDE && language!='german' && <img src={rigoImage10} style={{ width: '60px', height: 'auto', borderRadius: '40px' }} onClick={()=>{setLanguage('german')}}/>}
                     </div>
 
+
+                </div>
+                    </div>
 
                 </div>
 

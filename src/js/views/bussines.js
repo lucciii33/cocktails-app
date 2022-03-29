@@ -17,7 +17,7 @@ export const Bussines = ({ rec }) => {
       </div>
       <div className="row container d-flex justify-content-evenly col-sm-12">
     
-       <div className=" col-sm-12 boxes border rounded border-danger bg-dark joshstyles"> 
+       <div className=" col-sm-12 boxes border rounded  joshstyles"> 
        <img src={rigoImage13} style={{ width: '100px', height: 'auto' }} />
        <h2 className="bussinesh2">Good Recipes</h2>
          <p className="m-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
