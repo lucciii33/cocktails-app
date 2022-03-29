@@ -2,7 +2,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			recipe: [],
-			users : [],
+			users: [],
 			loggId: [],
 			favorites: [],
 			shopingList: [],
@@ -23,27 +23,41 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// 		});
 			// }
 
-			registerUsers: (user)=>{
+			registerUsers: (user) => {
 				const newUser = getStore().users;
 				newUser.push(user)
 				setStore({ users: newUser });
 			},
+			LogInUsers: (userLogged) => {
+				const log = getStore().loggId;
+				log.push(userLogged)
+				setStore({ loggId: log });
+			},
 			addFav: (fav) => {
+
 				//get the store
-				const newFavorites = getStore().favorites;
-				newFavorites.push(fav)
-		
+				let favorites = getStore().favorites;
+				const found = favorites.find((item)=> item == fav )
+				if(found){
+					favorites = favorites.filter((element) => element !== fav)
+				}else{
+
+					favorites.push(fav)
+				}
 				//reset the global store
-				setStore({ favorites: newFavorites });
+				setStore({ favorites: favorites });
+				
 			},
 
-			
-		
-		  deleteFav: (fav)=>{
-			var deleteFavo = getStore().favorites;
-			let delet = deleteFavo.filter((element)=>element!==fav)
-			setStore({ favorites: delet });
-		  },
+
+
+
+
+			deleteFav: (fav) => {
+				var deleteFavo = getStore().favorites;
+				let delet = deleteFavo.filter((element) => element !== fav)
+				setStore({ favorites: delet });
+			},
 
 		  addToShopingList : (list) => {
 			  //get the store

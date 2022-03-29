@@ -20,13 +20,13 @@ export const RandomDrink = () => {
     const [random, setRandom] = useState([])
     const params = useParams();
     return (
-        <div className="">
-            <div className="row">
-                <div className="input-group mb-3 mt-3 col-6" style={{ width: '500px', height: 'auto' }}>
-                    <button className="my-button m-5" type="button" id="button-addon1" value='' onClick={fetchRes} ><i className="fas fa-cocktail"  style={{fontSize: '3em'}}></i></button>
+        <div className="d-flex justify-content-center row">
+            <div className="col-sm-12 col-md-6">
+                <div className="" style={{ width: '500px', height: 'auto' }}>
+                    <button className="my-button m-5 " type="button" id="button-addon1" value='' onClick={fetchRes} ><i className="fas fa-cocktail"  style={{fontSize: '3em'}}></i></button>
                 </div>
             </div>
-            <div className="container col-6">
+            <div className="container col-sm-12 col-md-6 mb-4">
             {random.map((rec , index)=>{
 		 
 			return (

@@ -14,7 +14,8 @@ import { PopularDrinks } from "./component/popularDrinks";
 import { FullCards } from "./views/fullCards";
 import { Information } from "./views/information";
 import {Bussines} from "./views/bussines"
-import { ShoppingList } from "./views/shoppingList";
+import {ShoppingList} from "./views/shoppingList";
+import { Contacts } from "./views/contacts";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
@@ -54,7 +55,9 @@ const Layout = () => {
 							<ShoppingList />
 						</Route>
 						<Route exact path="/information/:name" component={Information}/>
+						<Route exact path="/shoppinglist/" component={ShoppingList}/>
 						<Route exact path="/bussines" component={Bussines}/>
+						<Route exact path="/contacts" component={Contacts}/>
 						<Route>
 							<h1>Not found!</h1>
 						</Route>

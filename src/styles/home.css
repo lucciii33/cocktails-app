@@ -1,6 +1,14 @@
 body{
     background: #0F0C24;
 }
+.navbar{
+    background: #A350A3;
+}
+.logo{
+    border-bottom: 2px solid #C1436D;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
 .left{
     color:#C1436D
 }
@@ -33,6 +41,9 @@ body{
 .joshstyles {
     border-color: #C1436D !important;
 }
+.joshstyles2 {
+    border-color: #A350A3!important;
+}
 
 .my-button {
     width: 150px;
@@ -60,19 +71,46 @@ body{
 
 .boxes{
     margin: 20px;
-    margin-top: 150px;
-    background-color: rgb(198,177,198);
+    background-color: rgb(234, 214, 243);
     overflow: hidden;
-    height: 480px;
+    height: 490px;
     width: 300px;
     border-radius: 15px;
-    box-shadow: 0px 12px 18px -6px rgb(0,0,0,0.3);
+    box-shadow: 0px 12px 18px -6px rgba(114, 29, 90, 0.3);
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border: 1px solid #C1436D;
+    color: white;
  }
+ .boxBussines {
+     background-color: #A350A3;
+ }
+ .boxTodo{
+    height: 580px;
+    width: 400px;
+    background-color: rgb(198,177,198);
+ }
+.labelTodo{
+    color: white;
+}
+ @media screen and (min-width: 390px) {
+    .button{
+        justify-content: center;
+        align-items: center;
+    }
+  }
 
- .line-through {
-     text-decoration: line-through;
- }
+  .bussinesh2{
+      border-top: 1px solid pink;
+      margin: 10px;
+      padding: 5px;
+  }
 
- .text-4xl {
-     font-size: 22px;
- }
+  .line-through {
+    text-decoration: line-through;
+}
+
+.text-4xl {
+    font-size: 22px;
+}
