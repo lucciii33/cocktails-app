@@ -4,8 +4,8 @@ import rigoImage from "../../img/3img.png";
 import rigoImage5 from "../../img/img5.png";
 import "../../styles/home.css";
 import { FullCards } from "./fullCards";
-import rigoImage6 from "../../img/img6.png";
-import rigoImage7 from "../../img/img7.png";
+import rigoImage6 from "../../img/list.png";
+import rigoImage7 from "../../img/investor.png";
 
 export const Home = () => (
 	<div className="container py-5">
@@ -37,11 +37,11 @@ export const Home = () => (
 
 		<div className="d-flex row">
 
-		<div className="col-sm-12 col-lg-4 container border rounded mt-4 mb-4 joshstyles random-drink  text-center" style={{ width: '400px', height: 'auto' }}>
+		<div className="boxBussines col-sm-12 col-lg-4 container border rounded mt-4 mb-4 joshstyles2 random-drink  text-center" style={{ width: '400px', height: 'auto' }}>
 		<img src={rigoImage5} style={{ width: '250px', height: 'auto' }} />
-		<h2 className="left text-center">Don't know what to drink?</h2>
+		<h2 className="left text-center"style={{color: '#0F0C24'}}>Don't know what to drink?</h2>
 
-		<p className="left text-center">Hit that button and let us chose an amazing Drink for you!</p>
+		<p className="left text-center"style={{color: '#0F0C24'}}> let us chose an amazing Drink for you!</p>
 		<Link to="/randomDrink">
 			<button className="button text-center m-2" style={{ backgroundColor: '#C1436D', border: 'none' }}>Get a Random Drink</button>
 		</Link>
@@ -53,18 +53,18 @@ export const Home = () => (
 		<img src={rigoImage7} style={{ width: '250px', height: 'auto' }} />
 		<h2 className="left text-center" style={{color: '#0F0C24'}}>Bussines consulting</h2>
 
-		<p className="left text-center">Are you opening a bar? let us help you we are experts</p>
+		<p className="left text-center" style={{color: '#0F0C24'}}>Are you opening a bar? let us help you we are experts</p>
 		<Link to="/bussines">
 			<button className="button text-center m-2" style={{ backgroundColor: '#C1436D', border: 'none' }}>see more info</button>
 		</Link>
 		</div>
 
 
-		<div className=" col-sm-12 col-lg-4 container border rounded bg-dark mt-4 mb-4 joshstyles random-drink col-12 text-center" style={{ width: '400px', height: 'auto' }}>
+		<div className="boxBussines col-sm-12 col-lg-4 container border rounded mt-4 mb-4 joshstyles2 random-drink col-12 text-center" style={{ width: '400px', height: 'auto' }}>
 		<img src={rigoImage6} style={{ width: '250px', height: 'auto' }} />
-		<h2 className="left text-center">make a list here!</h2>
+		<h2 className="left text-center"  style={{color: '#0F0C24'}}>make a list here!</h2>
 
-		<p className="left text-center">and get ready for friday night</p>
+		<p className="left text-center"  style={{color: '#0F0C24'}}>and get ready for friday night</p>
 		<Link to="/shoppinglist">
 			<button className="button text-center m-2" style={{ backgroundColor: '#C1436D', border: 'none' }}>Lest do this!</button>
 		</Link>

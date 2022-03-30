@@ -16,20 +16,12 @@ export const Navbar = () => {
 						<li className="nav-item ms-auto">
 
 				<nav className="navbar m-2">
-						<form className="d-flex m-2">
-							<input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-								<button className="button" type="submit">Search</button>
-						</form>
 					<Link to="/register">
-							<button className="button m-2">Register</button>
+							<h5 className="m-2"style={{color: '#0F0C24'}}>Register</h5>
 					</Link>
 					<Link to="/signin">
-							<button className="button m-2">Login</button>
-					</Link>
-					<Link to="/shopinglist">
-							<button className="button m-2">Shopping List</button>
-					</Link>
-					
+							<h5 className="m-1"style={{color: '#0F0C24'}}>Login</h5>
+					</Link>					
 				</nav>
 						</li>
 					</ul>
