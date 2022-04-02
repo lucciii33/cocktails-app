@@ -5,8 +5,8 @@ export const Navbar = () => {
 	return (
 		<nav className="navbar navbar-expand-lg navbar-light">
 			<div className="container-fluid ">
-			<Link to="/">
-				<h6 className="logo navbar-brand m-3">The Drink Link</h6>
+			<Link to="/" className="logo">
+				<h6 className="logolinea navbar-brand">The Drink Link</h6>
 			</Link>
 				<button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span className="navbar-toggler-icon"></span>
@@ -16,11 +16,11 @@ export const Navbar = () => {
 						<li className="nav-item ms-auto">
 
 				<nav className="navbar m-2">
-					<Link to="/register">
-							<h5 className="m-2"style={{color: '#0F0C24'}}>Register</h5>
+					<Link to="/register" className="logo">
+							<h5 className="m-2 logolinea "style={{color: '#0F0C24'}}>Register</h5>
 					</Link>
-					<Link to="/signin">
-							<h5 className="m-1"style={{color: '#0F0C24'}}>Login</h5>
+					<Link to="/signin"className="logo">
+							<h5 className="m-1 logolinea "style={{color: '#0F0C24'}}>Login</h5>
 					</Link>					
 				</nav>
 						</li>
