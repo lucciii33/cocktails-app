@@ -9,7 +9,6 @@ body{
     
 }
 .logolinea{
-    border-bottom: 2px solid #C1436D;
     font-size: 1.5rem;
 }
 .left{
@@ -181,4 +180,23 @@ body{
                 0 0 50px rgb(215, 89, 237);
     border-color: #A350A3;
 }
-
+.card{
+    transition: 0.9s;
+    background-color: #0F0C24;
+    color: white;
+}
+.card:hover{
+transform: scale(1.1);
+box-shadow: #0F0C24;
+margin-bottom: 125px ;
+}
+.link{
+    text-decoration: none;
+    
+}
+.card1{
+    background-color: #0F0C24;
+    color: white;
+    border-radius: 15px;
+    margin: auto;
+}

@@ -18,7 +18,7 @@ export const Information = ({ rec }) => {
     const params = useParams();
     return (
         <div className="container-fluid mt-3">
-            <div className="card mb-3" style={{ maxWidth: '1100px' }}>
+            <div className="card1 mb-3" style={{ maxWidth: '1100px' }}>
                 <div className="row g-0">
                     <div className="col-md-4">
                         <img src={rec.strDrinkThumb} className="img-fluid rounded-start" alt="..." style={{ width: 'auto', height: '100%' }} />
@@ -42,11 +42,11 @@ export const Information = ({ rec }) => {
                     <div className="m-2">
 
                     {rec.strInstructionsIT && language!='italian' && <img src={rigoImage8} style={{ width: '60px', height: 'auto', borderRadius: '40px'}} onClick={()=>{setLanguage('italian')}}/>}
-                    {language!=""&& <img src={rigoImage9} style={{ width: '50px', height: 'auto' }} onClick={()=>{setLanguage('')} }/>}
+                    {language!=""&& <img src={rigoImage9} style={{ width: '60px', height: 'auto', borderRadius: '40px' }} onClick={()=>{setLanguage('')} } className=""/>}
                     </div>
                     <div className="m-2">
 
-                    {rec.strInstructionsDE && language!='german' && <img src={rigoImage10} style={{ width: '60px', height: 'auto', borderRadius: '40px' }} onClick={()=>{setLanguage('german')}}/>}
+                    {rec.strInstructionsDE && language!='german' && <img src={rigoImage10} style={{ width: '60px', height: 'auto', borderRadius: '40px'}} onClick={()=>{setLanguage('german')}} className=""/>}
                     </div>
 
 
@@ -56,7 +56,7 @@ export const Information = ({ rec }) => {
                 </div>
 
             </div>
-            <div className="d-flex">
+            <div className="d-flex justify-content-center">
                 <button className={colorButton == "buttonList"?"button":"buttonList"}onClick={function(){ actions.addToShopingList(rec);setColorButton("button")}}>
                     Add to Shopping List
                 </button>
