@@ -1,5 +1,5 @@
 body{
-    background: #0F0C24;
+    background: #c4d8e2;
 }
 .navbar{
     background: #A350A3;
@@ -13,7 +13,7 @@ body{
     font-size: 1.5rem;
 }
 .left{
-    color:#C1436D
+    color:#0F0C24
 }
 
 .button {
@@ -157,4 +157,28 @@ body{
   opacity: .5;
 }
 
+.buttonList {
+    outline: 0;
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 15px;
+    /* overflow: hidden; */
+    cursor: pointer;
+    border: 2px solid #A350A3;
+    background: #A350A3;
+    color: white;
+    font-weight: 400;
+    transition: box-shadow 0.5s ease-in-out, border-color 0.5s ease-in-out;
+    border-radius: 10px;
+}
+.buttonList:hover {
+    background-color: #A350A3;
+    color: white;
+    box-shadow: 0 0 5px #A350A3,
+                0 0 20px rgb(237, 121, 217),
+                0 0 35px rgb(240, 151, 212),
+                0 0 50px rgb(215, 89, 237);
+    border-color: #A350A3;
+}
 

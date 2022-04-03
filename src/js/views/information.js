@@ -14,6 +14,7 @@ export const Information = ({ rec }) => {
     const[ingredients, setingredients] = useState("")
     const [icon, setIcon] = useState(false)
     const [addFav, setAddFav] = useState(0)
+    const[colorButton, setColorButton]=useState("buttonList")
     const params = useParams();
     return (
         <div className="container-fluid mt-3">
@@ -56,10 +57,7 @@ export const Information = ({ rec }) => {
 
             </div>
             <div className="d-flex">
-                <button className="button d-flex justify-content-between m-1" onClick={() => {
-                  actions.addToShopingList(rec);
-                  
-                }}>
+                <button className={colorButton == "buttonList"?"button":"buttonList"}onClick={function(){ actions.addToShopingList(rec);setColorButton("button")}}>
                     Add to Shopping List
                 </button>
                 <Link to="/">

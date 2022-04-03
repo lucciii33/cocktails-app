@@ -39,30 +39,30 @@ export const Home = () => (
 
 		<div className="boxBussines col-sm-12 col-lg-4 container border rounded mt-4 mb-4 joshstyles2 random-drink  text-center" style={{ width: '400px', height: 'auto' }}>
 		<img src={rigoImage5} style={{ width: '250px', height: 'auto' }} />
-		<h2 className="left text-center"style={{color: '#0F0C24'}}>Don't know what to drink?</h2>
+		<h2 className="left text-center mb-3"style={{color: '#0F0C24'}}>Random drink!</h2>
 
 		<p className="left text-center"style={{color: '#0F0C24'}}> let us chose an amazing Drink for you!</p>
 		<Link to="/randomDrink">
-			<button className="button text-center m-2" style={{ backgroundColor: '#C1436D', border: 'none' }}>Get a Random Drink</button>
+			<button className="button text-center m-2 mt-5" style={{ backgroundColor: '#C1436D', border: 'none' }}>Get a Random Drink</button>
 		</Link>
 		</div>
 
 
 
 		<div className="boxBussines col-sm-12 col-lg-4 container border rounded mt-4 mb-4 joshstyles2 col-12 text-center" style={{ width: '400px', height: 'auto' }}>
-		<img src={rigoImage7} style={{ width: '250px', height: 'auto' }} />
-		<h2 className="left text-center" style={{color: '#0F0C24'}}>Bussines consulting</h2>
+		<img src={rigoImage7} style={{ width: '250px', height: 'auto' }} className="" />
+		<h2 className="left text-center mb-3" style={{color: '#0F0C24'}}>Bussines consulting</h2>
 
 		<p className="left text-center" style={{color: '#0F0C24'}}>Are you opening a bar? let us help you we are experts</p>
 		<Link to="/bussines">
-			<button className="button text-center m-2 mt-4" style={{ backgroundColor: '#C1436D', border: 'none' }}>see more info</button>
+			<button className="button text-center m-2 mt-3" style={{ backgroundColor: '#C1436D', border: 'none' }}>see more info</button>
 		</Link>
 		</div>
 
 
 		<div className="boxBussines col-sm-12 col-lg-4 container border rounded mt-4 mb-4 joshstyles2 random-drink col-12 text-center" style={{ width: '400px', height: 'auto' }}>
 		<img src={rigoImage6} style={{ width: '250px', height: 'auto' }} />
-		<h2 className="left text-center"  style={{color: '#0F0C24'}}>make a list here!</h2>
+		<h2 className="left text-center  mb-3"  style={{color: '#0F0C24'}}>make a list here!</h2>
 
 		<p className="left text-center"  style={{color: '#0F0C24'}}>and get ready for friday night</p>
 		<Link to="/shoppinglist">
