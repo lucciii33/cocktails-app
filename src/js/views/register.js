@@ -36,7 +36,7 @@ const [formValues, setFormValues ] = useState({
 					<div className="d-flex justify-content-center mx-auto mb-3" style={{ width: '400px', height: 'auto' }}>
 					<Link to="/signin">
 						
-						<span onClick={()=> actions.registerUsers(formValues)} className="button btn-lg " type='text' style={{backgroundColor: '#C1436D', border: 'none'}} id="submitButton">Submit</span>
+						<span onClick={function(){ actions.registerUsers(formValues); alert('Welcome')}}className="button btn-lg " type='text' style={{backgroundColor: '#C1436D', border: 'none'}} id="submitButton">Submit</span>
 					</Link>
 					</div>
 				</form>

@@ -9,6 +9,28 @@ import rigoImage13 from "../../img/conc.png";
 export const Bussines = ({ rec }) => {
   const { store, actions } = useContext(Context);
   const params = useParams();
+  const getCourses= () => {
+    fetch("https://www.udemy.com/api-2.0/courses/",  {
+     'mode': 'no-cors', "method": "GET",
+      "headers": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Basic ZUNKNlo0QU9mVWc4eWxHSnE2U3lJcHpNaXNzenNab0ptQlBWTHZ1VDpwc3N3R1RVaGJWSHU1c0NaSXVlUlBtQnZYbHhjMTFsZjk3UkZjdEo4aUVGVWFxN3g3WUdUcnVoM041ZTZuOVIxdjdRaDJOMG96T3VZcVh4eUptVmszNjNjd0ltenZzQWVFRzg0ZlJuUDFURHNzUkpuaVNkV3Y4R3BDRzkwZXFiTA==",
+        "Content-Type": "application/json;charset=utf-8"
+      }
+    })
+    // .then(res=>res.json())
+      .then(data => {
+        console.log(data)
+      })
+      .catch(err => {
+        console.error(err);
+      });
+
+  }
+
+  useEffect(() => {
+    getCourses();
+}, []);
   return (
     <div className="container">
 
@@ -43,3 +65,6 @@ export const Bussines = ({ rec }) => {
 Bussines.propTypes = {
   match: PropTypes.object,
 };
+
+// Identificación del cliente	eCJ6Z4AOfUg8ylGJq6SyIpzMisszsZoJmBPVLvuT
+// Secreto de cliente	psswGTUhbVHu5sCZIueRPmBvXlxc11lf97RFctJ8iEFUaq7x7YGTruh3N5e6n9R1v7Qh2N0ozOuYqXxyJmVk363cwImzvsAeEG84fRnP1TDssRJniSdWv8GpCG90eqbL

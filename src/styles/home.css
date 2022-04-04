@@ -87,6 +87,14 @@ body{
  }
  .boxBussines {
      background-color: #A350A3;
+     transition: 0.9s;
+ }
+ .boxBussines:hover {
+     background-color: #dda0dd;
+     transition: 0.9s;
+     transform: scale(1.1);
+    box-shadow: #0F0C24;
+    margin-bottom: 125px ;
  }
  .boxTodo{
     height: 580px;
@@ -199,4 +207,7 @@ margin-bottom: 125px ;
     color: white;
     border-radius: 15px;
     margin: auto;
+}
+.fas fa-heart{
+    background:green ;
 }

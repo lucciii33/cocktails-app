@@ -7,10 +7,10 @@ import { Context } from "../store/appContext";
 import "../../styles/demo.css";
 
 export const SignIn = () => {
-	useEffect(()=>{
-	  alert (" WELCOME! YOUR REGISTER HAVE BEEN SUCCED ");  
-	}  
-	,[])
+	// useEffect(()=>{
+	//   alert (" WELCOME! YOUR REGISTER HAVE BEEN SUCCED ");  
+	// }  
+	// ,[])
  
 	const { store, actions } = useContext(Context);
 	const [logInValues, setLogInValues ] = useState({
@@ -27,11 +27,11 @@ export const SignIn = () => {
 						<div className="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
 					</div>
 					<div className="mb-3 mx-auto" style={{ width: '400px', height: 'auto' }}>
-						<input value ={logInValues.password} onChange={(e)=> setLogInValues({...logInValues,password:e.target.value}) }  className="form-control" id="password" type="text" placeholder="Password" data-sb-validations="required" />
+						<input value ={logInValues.password} onChange={(e)=> setLogInValues({...logInValues,password:e.target.value}) }  className="form-control" id="password" type="password" placeholder="Password" data-sb-validations="required" />
 						<div className="invalid-feedback" data-sb-feedback="password:required">Password is required.</div>
 					</div>
 					<div className="d-grid mx-auto mb-3" style={{ width: '400px', height: 'auto' }}>
-					<Link to="/home">
+					<Link to="recipebrowser">
 					<span onClick={()=> actions.LogInUsers(logInValues)} className="button btn-lg " type='text' style={{backgroundColor: '#C1436D', border: 'none'}} id="submitButton">Submit</span>
 					</Link>
 					</div>
