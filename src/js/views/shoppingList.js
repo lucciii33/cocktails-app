@@ -20,14 +20,14 @@ export const ShoppingList = () => {
             {store.shopingList.map((item, i) => {
                                     return(
                                         <div className="container">
-                                            <div >
+                                            <div className="borderShopping m-5">
                                                 <table style={{width:"100%"}}>
                                                 <thead>
                                                     <tr>
                                                         <th style={{width:"30%"}}><h3 key={i}>{item.strDrink}</h3></th>
                                                     </tr>
                                                 </thead>
-                                                <tbody>    
+                                                <tbody >    
                                                     {item.strIngredient1 ? <tr><td className={`text-4xl ${(checked[item.strIngredient1])? 'line-through': ''}`} >{item.strIngredient1}</td><td><input type="checkbox" name={item.strIngredient1} value={item.strIngredient1} onChange={handleChange}  /></td></tr> : "" }
                                                     {item.strIngredient2 ? <tr><td className={`text-4xl ${(checked[item.strIngredient2])? 'line-through': ''}`} >{item.strIngredient2}</td><td><input type="checkbox" name={item.strIngredient2} value={checked.checkbox2} onChange={handleChange}   /></td></tr> : "" }   
                                                     {item.strIngredient3 ? <tr><td className={`text-4xl ${(checked[item.strIngredient3])? 'line-through': ''}`} >{item.strIngredient3}</td><td><input type="checkbox" name={item.strIngredient3} value={checked.checkbox3} onChange={handleChange}  /></td></tr> : "" }

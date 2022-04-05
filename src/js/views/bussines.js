@@ -10,15 +10,19 @@ export const Bussines = ({ rec }) => {
   const { store, actions } = useContext(Context);
   const params = useParams();
   const getCourses= () => {
-    fetch("https://www.udemy.com/api-2.0/courses/",  {
-     'mode': 'no-cors', "method": "GET",
+    fetch("https://www.udemy.com/api-2.0/courses/?search=bartender",  {
+      "method": "GET",
       "headers": {
         "Accept": "application/json, text/plain, */*",
-        "Authorization": "Basic ZUNKNlo0QU9mVWc4eWxHSnE2U3lJcHpNaXNzenNab0ptQlBWTHZ1VDpwc3N3R1RVaGJWSHU1c0NaSXVlUlBtQnZYbHhjMTFsZjk3UkZjdEo4aUVGVWFxN3g3WUdUcnVoM041ZTZuOVIxdjdRaDJOMG96T3VZcVh4eUptVmszNjNjd0ltenZzQWVFRzg0ZlJuUDFURHNzUkpuaVNkV3Y4R3BDRzkwZXFiTA==",
+        "Authorization": "Basic e2VDSjZaNEFPZlVnOHlsR0pxNlN5SXB6TWlzc3pzWm9KbUJQVkx2dVR9Ontwc3N3R1RVaGJWSHU1c0NaSXVlUlBtQnZYbHhjMTFsZjk3UkZjdEo4aUVGVWFxN3g3WUdUcnVoM041ZTZuOVIxdjdRaDJOMG96T3VZcVh4eUptVmszNjNjd0ltenZzQWVFRzg0ZlJuUDFURHNzUkpuaVNkV3Y4R3BDRzkwZXFiTH0=",
         "Content-Type": "application/json;charset=utf-8"
       }
     })
-    // .then(res=>res.json())
+
+      .then(res=>{
+        console.log(res)
+        return res.json()
+      })
       .then(data => {
         console.log(data)
       })
